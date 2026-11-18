@@ -1,0 +1,32 @@
+{
+  "scenario_id": "SWEEP_FRAG_LOW",
+  "description": "Fragmentation sweep - low",
+  "layout": "low",
+  "corruption_pct": 0,
+  "missing_pct": 0,
+  "decoys": false,
+  "files": [
+    "photo01.jpeg",
+    "photo02.jpeg",
+    "scan11.png",
+    "scan12.png",
+    "report19.pdf",
+    "report20.pdf",
+    "archive27.zip",
+    "archive28.zip",
+    "doc33.docx",
+    "doc34.docx",
+    "sheet39.xlsx",
+    "audio43.mp3",
+    "video47.mp4"
+  ],
+  "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\SWEEP_FRAG_LOW.img",
+  "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\SWEEP_FRAG_LOW\\placements.csv",
+  "total_blocks": 1898,
+  "image_bytes": 971776,
+  "n_present": 955,
+  "n_missing": 0,
+  "n_decoys": 0,
+  "n_noise": 839,
+  "n_fragments": 955
+}

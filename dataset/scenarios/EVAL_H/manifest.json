@@ -1,0 +1,32 @@
+{
+  "scenario_id": "EVAL_H",
+  "description": "Holdout - adversarial",
+  "layout": "severe",
+  "corruption_pct": 0.1,
+  "missing_pct": 0.1,
+  "decoys": true,
+  "files": [
+    "photo01.jpeg",
+    "photo02.jpeg",
+    "scan11.png",
+    "scan12.png",
+    "report19.pdf",
+    "report20.pdf",
+    "archive27.zip",
+    "archive28.zip",
+    "doc33.docx",
+    "doc34.docx",
+    "sheet39.xlsx",
+    "audio43.mp3",
+    "video47.mp4"
+  ],
+  "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\EVAL_H.img",
+  "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\EVAL_H\\placements.csv",
+  "total_blocks": 5788,
+  "image_bytes": 3008000,
+  "n_present": 868,
+  "n_missing": 87,
+  "n_decoys": 20,
+  "n_noise": 4709,
+  "n_fragments": 888
+}

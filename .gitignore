@@ -1,0 +1,126 @@
+# ==============================================================================
+# ForenSight .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Python & Bytecode
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing, Type Checking & Linting
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.mypy_cache/
+.ruff_cache/
+
+# ------------------------------------------------------------------------------
+# Node.js & Next.js Frontend
+# ------------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+frontend/out/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env*.local
+*.local
+
+# ------------------------------------------------------------------------------
+# Databases, Logs & Generated Reports
+# ------------------------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+forensight.db
+logs/
+*.log
+reports/generated/
+results/plots/
+
+# ------------------------------------------------------------------------------
+# Forensic Datasets, Disk Images & Fragment Blobs
+# (Can be deterministically regenerated via `python scripts/generate_dataset.py`)
+# ------------------------------------------------------------------------------
+dataset/disk_images/*.img
+dataset/disk_images/*.fsim
+dataset/disk_images/uploads/
+dataset/fragments/blobs/
+*/uploads/
+
+# ------------------------------------------------------------------------------
+# ML Model Weights & Trained Artifacts
+# (Can be re-trained using `python scripts/run_pipeline.py`)
+# If you prefer to track models via Git LFS or commit them directly,
+# remove or comment the rules below:
+# ------------------------------------------------------------------------------
+artifacts/*.joblib
+artifacts/*.pt
+!artifacts/.gitkeep
+
+# ------------------------------------------------------------------------------
+# Operating System & IDE Files
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Microsoft Office temporary lock files
+~$*.docx
+~$*.doc
+~$*.xlsx

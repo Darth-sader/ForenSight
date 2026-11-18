@@ -1,0 +1,33 @@
+{
+  "scenario_id": "S_G",
+  "description": "Scenario G - similar-content files",
+  "layout": "medium",
+  "corruption_pct": 0,
+  "missing_pct": 0,
+  "decoys": false,
+  "files": [
+    "photo03.jpeg",
+    "photo04.jpeg",
+    "photo05.jpeg",
+    "photo06.jpeg",
+    "photo07.jpeg",
+    "photo08.jpeg",
+    "photo09.jpeg",
+    "photo10.jpeg",
+    "report21.pdf",
+    "report22.pdf",
+    "report23.pdf",
+    "report24.pdf",
+    "report25.pdf",
+    "report26.pdf"
+  ],
+  "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\S_G.img",
+  "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_G\\placements.csv",
+  "total_blocks": 2366,
+  "image_bytes": 1211392,
+  "n_present": 810,
+  "n_missing": 0,
+  "n_decoys": 0,
+  "n_noise": 1452,
+  "n_fragments": 810
+}

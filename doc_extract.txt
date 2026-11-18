@@ -1,0 +1,880 @@
+ForenSight: Intelligent Fragment Recovery Using Machine Learning
+1. Project Overview
+Develop ForenSight, an AI/ML-driven digital forensic file recovery system that identifies, relates, and reconstructs fragmented digital files from forensic disk images.
+The project must be primarily designed as an AI/ML project applied to digital forensics, rather than a conventional forensic recovery tool with a small ML component.
+The system should combine:
+Data preprocessing
+Feature engineering
+Supervised learning
+Classification
+Probability estimation
+Ensemble learning
+Deep learning
+Representation learning
+Unsupervised learning
+Clustering
+Anomaly detection
+Graph-based inference
+Optimization
+Probability calibration
+Explainable AI
+Hyperparameter optimization
+Ablation studies
+Generalization testing
+The forensic domain provides the application and ground truth, while the machine-learning pipeline is the central technical contribution.
+2. Problem Statement
+Digital storage devices frequently contain:
+Fragmented files
+Partially overwritten files
+Corrupted files
+Deleted artifacts
+Mixed fragments belonging to multiple files
+Missing fragments
+Reused storage blocks
+Conventional file carving primarily relies on:
+File signatures
+Headers
+Footers
+Magic numbers
+Predefined structural rules
+These methods work well for contiguous or lightly fragmented files but become less reliable when:
+Fragments are scattered across storage
+Fragments are partially corrupted
+Fragments from multiple files are interleaved
+Some fragments are missing
+File structure is partially damaged
+Multiple candidate fragments appear plausible
+ForenSight should model recovery as an AI-driven fragment relationship and reconstruction problem.
+3. Central Research Question
+Can machine learning learn meaningful relationships between fragmented storage blocks and use those relationships to reconstruct digital artifacts more accurately and reliably than conventional signature-based file carving?
+Secondary research questions:
+Which fragment features are most useful for reconstruction?
+Does learned representation outperform manually engineered features?
+How does fragmentation affect reconstruction accuracy?
+How robust is the model to corruption and missing fragments?
+Does filesystem/storage context improve prediction?
+Can unsupervised learning detect incorrectly assigned fragments?
+Can graph-based inference improve reconstruction over pairwise ML predictions?
+Can confidence calibration make reconstruction probabilities forensically meaningful?
+4. Overall Architecture
+                    FORENSIC DISK IMAGE
+                            │
+                            ▼
+                  Fragment Extraction
+                            │
+                            ▼
+                Dataset + Ground Truth
+                            │
+                            ▼
+                  Data Preprocessing
+                            │
+                            ▼
+                   Feature Engineering
+                            │
+             ┌──────────────┴──────────────┐
+             │                             │
+             ▼                             ▼
+      Handcrafted Features        Learned Representations
+             │                             │
+             │                      Deep Learning
+             │                      / Embeddings
+             │                             │
+             └──────────────┬──────────────┘
+                            ▼
+                 Fragment Pair Generation
+                            │
+                            ▼
+                    SUPERVISED LEARNING
+                            │
+            ┌───────────────┼────────────────┐
+            ▼               ▼                ▼
+       Same-file       Next-fragment      Relationship
+      Classification    Prediction        Probability
+            │               │                │
+            └───────────────┼────────────────┘
+                            ▼
+                  Fragment Embeddings
+                            │
+                            ▼
+                    Clustering Layer
+                            │
+                            ▼
+                Fragment Relationship Graph
+                            │
+                            ▼
+                 Graph-based Inference
+                            │
+                            ▼
+                Candidate Reconstruction
+                            │
+             ┌──────────────┴──────────────┐
+             ▼                             ▼
+      Forensic Constraints          Anomaly Detection
+             │                             │
+             └──────────────┬──────────────┘
+                            ▼
+                    Candidate Ranking
+                            │
+                            ▼
+                  Confidence Calibration
+                            │
+                            ▼
+                    Explainable Output
+                            │
+                            ▼
+                 Ranked File Candidates
+                            │
+                            ▼
+                Forensic Evaluation Report
+5. AIML COMPONENTS
+The project should explicitly implement the following AIML components.
+AIML Component
+ForenSight Application
+Data preprocessing
+Normalize fragment representations
+Feature engineering
+Extract byte, statistical, structural and contextual features
+Supervised learning
+Learn fragment relationships
+Binary classification
+Same-file / different-file
+Transition prediction
+Determine whether B follows A
+Probability estimation
+Estimate relationship likelihood
+Ensemble learning
+Random Forest / gradient boosting
+Deep learning
+Learn fragment representations
+Metric learning
+Learn similarity between fragments
+Representation learning
+Generate fragment embeddings
+Clustering
+Group similar fragments
+Anomaly detection
+Detect suspicious/misassigned fragments
+Graph inference
+Model relationships between fragments
+Optimization
+Find high-scoring valid reconstructions
+Hyperparameter optimization
+Tune ML models
+Probability calibration
+Calibrate reconstruction confidence
+Explainable AI
+Explain fragment/reconstruction decisions
+Ablation studies
+Determine contribution of feature groups
+Generalization testing
+Test on unseen files/scenarios
+6. Controlled Dataset Generation
+Create a controlled forensic corpus instead of relying exclusively on a generic dataset.
+Initial file types
+JPEG
+PNG
+PDF
+ZIP
+DOCX
+Optional:
+MP4
+MP3
+XLSX
+Each original file must have known ground truth.
+Example:
+F001 → photo01.jpg → position 0
+F002 → photo01.jpg → position 1
+F003 → photo01.jpg → position 2
+F004 → report01.pdf → position 0
+F005 → report01.pdf → position 1
+Store:
+fragment_id
+source_file
+file_type
+original_position
+fragment_size
+physical_offset
+filesystem_context
+7. Data Generation Scenarios
+Generate controlled scenarios.
+Scenario A — Contiguous
+A → B → C → D
+Scenario B — Low fragmentation
+A → X → B → Y → C → D
+Scenario C — High fragmentation
+A → X → Q → B → Y → C → Z → P → D
+Scenario D — Corruption
+Modify controlled percentages of bytes:
+1%
+5%
+10%
+20%
+Scenario E — Missing fragments
+A → B → [MISSING] → D
+Scenario F — Mixed-file fragments
+Interleave fragments from multiple files.
+Scenario G — Similar-content files
+Include multiple files with similar byte distributions.
+Scenario H — Combined adversarial scenario
+Combine:
+High fragmentation
+Corruption
+Missing fragments
+Mixed fragments
+Similar files
+Competing candidate fragments
+8. Data Preprocessing
+Implement an explicit preprocessing pipeline.
+Tasks:
+Fragment extraction
+Byte normalization
+Numerical normalization
+Missing-value handling
+Feature scaling where required
+Dimensionality reduction where useful
+Duplicate detection
+Label generation
+Positive/negative pair generation
+Class balancing
+Handle class imbalance using appropriate methods such as:
+Stratified sampling
+Class weights
+Controlled negative sampling
+SMOTE where appropriate and scientifically justified
+Avoid synthetic oversampling of raw forensic bytes unless justified.
+9. Fragment Representation
+Create two representations.
+A. Handcrafted feature representation
+Features include:
+Byte-level
+256-dimensional byte histogram
+Mean
+Variance
+Minimum
+Maximum
+Entropy
+Statistical
+Printable-byte ratio
+ASCII ratio
+Zero-byte ratio
+High-byte ratio
+Byte diversity
+N-gram frequency
+Structural
+File-format markers
+Header/footer evidence
+Internal structural markers
+Format-specific consistency
+Contextual
+Physical offset
+Block distance
+Filesystem cluster
+Allocation status
+Neighboring blocks
+10. Pairwise Feature Engineering
+For fragments A and B calculate:
+Entropy difference
+Histogram distance
+N-gram similarity
+Boundary byte compatibility
+Prefix/suffix compatibility
+Structural compatibility
+Format compatibility
+Physical distance
+Filesystem distance
+Context compatibility
+Primary question:
+How likely is B to immediately follow A?
+11. Supervised Learning
+Create two primary supervised learning tasks.
+Task 1 — Same-file classification
+Input:
+Fragment A + Fragment B
+Output:
+P(A and B belong to same file)
+Target:
+1 = same file
+0 = different file
+Task 2 — Next-fragment prediction
+Input:
+Fragment A + candidate Fragment B
+Output:
+P(B immediately follows A)
+Target:
+1 = immediate successor
+0 = not immediate successor
+Task 2 is the primary reconstruction model.
+12. Baseline Machine Learning Models
+Implement:
+Logistic Regression
+Linear baseline
+Interpretable probabilities
+Random Forest
+Nonlinear baseline
+Feature importance
+XGBoost
+Gradient boosting
+Primary tabular ML candidate
+These models are used primarily to establish baseline performance and understand the effect of different feature representations.
+Do not make the project simply a comparison of these models.
+13. Deep Learning Component
+Implement a neural representation-learning component.
+Use a neural network to transform raw fragment representations into compact embeddings.
+Fragment
+   │
+   ▼
+Neural Encoder
+   │
+   ▼
+Embedding Vector
+Example:
+Fragment A → [0.21, 0.73, 0.11, ...]
+Fragment B → [0.24, 0.69, 0.14, ...]
+14. Siamese / Metric Learning
+Where computationally feasible, implement a Siamese network.
+Fragment A ──► Encoder ──► Embedding A
+                              │
+                              ▼
+                           Distance
+                              ▲
+                              │
+Fragment B ──► Encoder ──► Embedding B
+Train the network so that:
+Fragments from related sequences become closer.
+Unrelated fragments become farther apart.
+Use:
+Contrastive loss or
+Triplet loss
+This introduces:
+Deep learning
+Representation learning
+Metric learning
+into the project.
+15. Dimensionality Reduction
+Use techniques such as:
+PCA
+t-SNE
+UMAP where available
+for visualization and analysis of learned fragment representations.
+Example:
+          Fragment embeddings
+       ● ● ●
+      ● ● ● ●        JPEG
+                    cluster
+                         ▲
+                         │
+              ● ● ●
+             ● ● ● ●     PDF
+This allows us to visually investigate whether the model has learned meaningful structure.
+Important:
+PCA can be used as a preprocessing/analysis technique.
+t-SNE/UMAP should primarily be used for visualization, not as the sole basis for reconstruction.
+16. Clustering
+Apply unsupervised clustering to fragment embeddings/features.
+Potential methods:
+K-Means
+DBSCAN
+Hierarchical clustering
+Purpose:
+Group fragments with similar characteristics.
+Identify possible file families.
+Reduce candidate search space.
+Detect unusual fragments.
+Investigate whether fragments from the same file naturally cluster.
+Do not assume clusters equal files; use clustering as an auxiliary inference and analysis mechanism.
+17. Anomaly Detection
+Apply:
+Isolation Forest
+Local Outlier Factor
+One-Class SVM where useful
+Detect:
+Statistically unusual fragments
+Structurally inconsistent fragments
+Possible mixed-file contamination
+Corrupted regions
+Incorrectly assigned fragments
+Example:
+A → B → C → X → D
+X = anomaly
+Output:
+Fragment X
+Anomaly score: 0.91
+Status: Suspicious
+18. Fragment Relationship Graph
+Represent fragments as graph nodes.
+ML predictions become weighted directed edges.
+A ──0.94──> B
+A ──0.21──> C
+B ──0.91──> C
+C ──0.96──> D
+The graph should combine:
+Supervised probabilities
+Embedding similarity
+Structural compatibility
+Contextual information
+19. Graph-Based Inference
+Use the graph to generate candidate reconstructions.
+Potential approaches:
+Highest-probability path
+Beam search
+Dynamic programming
+Constrained path search
+Do not simply choose the highest edge at every step.
+Generate multiple candidate paths.
+Example:
+Candidate 1:
+A → B → C → D
+Candidate 2:
+A → B → X → D
+Candidate 3:
+A → Y → C → D
+Rank them using combined evidence.
+20. Reconstruction Scoring
+Create a combined score:
+FinalScore =
+    ML Transition Score
+  + Embedding Similarity
+  + Structural Consistency
+  + Contextual Evidence
+  - Anomaly Penalty
+  - Constraint Violations
+The exact weights should be learned or empirically calibrated rather than arbitrarily chosen.
+Investigate:
+Fixed weighted scoring
+Logistic/meta-model combination
+Learning-to-rank approach if feasible
+21. Learning-to-Rank Extension
+If sufficient data is available, treat candidate reconstruction ranking as a ranking problem.
+Given:
+Candidate A
+Candidate B
+Candidate C
+learn to rank:
+A > C > B
+based on:
+Transition scores
+Structural consistency
+Embedding similarity
+Anomaly score
+Contextual evidence
+This provides another genuine AIML component beyond simple classification.
+22. Forensic Constraints
+Apply deterministic constraints after ML inference.
+Examples:
+Valid file headers
+Valid footers where applicable
+File-format structural rules
+Expected file-size ranges
+Fragment-order constraints
+No impossible fragment reuse
+Filesystem constraints
+Format-specific consistency
+Principle:
+ML proposes. Constraints validate.
+Do not allow the ML model to blindly declare forensic truth.
+23. Confidence Calibration
+Raw model probabilities should not automatically be treated as trustworthy confidence.
+Implement:
+Platt scaling
+Isotonic regression
+Evaluate:
+Calibration curves
+Brier score
+Expected Calibration Error
+Output:
+Raw probability: 0.93
+Calibrated confidence: 0.87
+25. Hyperparameter Optimization
+Do not manually select all parameters.
+Use:
+Grid Search
+Random Search
+Bayesian optimization where feasible
+Tune:
+Random Forest
+Number of trees
+Maximum depth
+Minimum samples per split
+XGBoost
+Learning rate
+Number of estimators
+Maximum depth
+Subsample
+Column sampling
+Neural network
+Learning rate
+Batch size
+Embedding dimension
+Number of layers
+Dropout
+Use validation data and avoid test-set tuning.
+26. Cross-Validation
+Use:
+Stratified K-fold cross-validation for classification where appropriate.
+Group-based splitting by original file to prevent leakage.
+The same original file must not contribute fragments to both training and test sets.
+27. Generalization Experiments
+Test the system on:
+Completely unseen files
+Unseen fragmentation patterns
+Different fragment sizes
+Different corruption levels
+Different file types
+Metadata-aware conditions
+Metadata-independent conditions
+Important question:
+Does the model learn general fragment relationships, or does it simply memorize characteristics of the training files?
+28. Feature Ablation
+Measure the contribution of different feature families.
+Experiment A
+Byte-level only.
+Experiment B
+Byte + statistical.
+Experiment C
+Byte + statistical + structural.
+Experiment D
+Byte + statistical + structural + boundary.
+Experiment E
+All features + contextual information.
+Also compare:
+Handcrafted features
+        VS
+Learned embeddings
+        VS
+Hybrid representation
+This is a major AIML experiment.
+29. Fragmentation Experiments
+Test:
+Contiguous
+Low fragmentation
+Medium fragmentation
+High fragmentation
+Severe fragmentation
+Plot:
+Fragmentation Level
+        VS
+Reconstruction Accuracy
+Compare:
+Conventional carving
+Handcrafted ML
+Deep representation model
+Full ForenSight
+30. Corruption Experiments
+Test:
+0%
+1%
+5%
+10%
+20%
+corruption.
+Measure:
+Classification
+Transition prediction
+Reconstruction
+Confidence degradation
+31. Missing Fragment Experiments
+Test recovery when:
+0% missing
+5% missing
+10% missing
+20% missing
+Evaluate:
+Partial reconstruction
+Correctly identified gaps
+Candidate ranking
+False reconstruction
+The system should be able to return:
+A → B → [UNKNOWN] → D
+rather than fabricating a fragment.
+32. Competing Fragment Experiments
+Provide several plausible candidates for each transition.
+Evaluate:
+Top-1
+Top-3
+Top-5
+This tests whether the learned ranking system can select the correct fragment among plausible alternatives.
+33. Metadata Experiments
+Compare:
+Fragment-only
+       VS
+Fragment + filesystem context
+Determine the contribution of contextual information.
+Also test completely raw/unallocated fragments where filesystem metadata is unavailable.
+34. Conventional Forensic Baseline
+Implement or integrate a conventional signature-based carving baseline.
+Compare:
+Traditional carving
+        VS
+ML relationship model
+        VS
+ML + graph
+        VS
+ML + graph + constraints
+        VS
+Full ForenSight
+This demonstrates the incremental value of each component.
+35. Evaluation Metrics
+Classification
+Accuracy
+Precision
+Recall
+F1
+ROC-AUC
+PR-AUC
+Confusion matrix
+Reconstruction
+Fragment placement accuracy
+Transition accuracy
+Complete reconstruction rate
+Partial reconstruction rate
+Top-1 recovery
+Top-3 recovery
+Top-5 recovery
+False reconstruction rate
+Anomaly detection
+Precision
+Recall
+F1
+False-positive rate
+Calibration
+Brier score
+Expected Calibration Error
+Reliability curves
+Ranking
+MRR
+Top-K accuracy
+NDCG where appropriate
+36. Final Forensic Output
+For every disk-image analysis, generate ranked candidates.
+Example:
+RECOVERY CANDIDATE #1
+File Type: JPEG
+Estimated Size: 2.8 MB
+Fragment Sequence:
+F103 → F291 → F082 → F442 → F019 → F521
+Calibrated Confidence:
+94.7%
+ML Evidence:
+✓ High transition probabilities
+✓ Strong embedding similarity
+✓ Compatible fragment statistics
+Forensic Evidence:
+✓ JPEG structural consistency
+✓ Valid header/footer relationship
+✓ No impossible fragment reuse
+Anomaly Analysis:
+✓ No major anomalies
+Classification:
+HIGH-CONFIDENCE RECOVERY
+Candidate #2:
+RECOVERY CANDIDATE #2
+Confidence: 61.3%
+Issues:
+⚠ Competing fragment assignment
+⚠ Structural inconsistency
+⚠ Elevated anomaly score
+Classification:
+UNCERTAIN
+37. Visualization
+The project should provide visualizations for:
+Fragment relationship graph
+Fragment embedding space
+Clustering
+Feature importance
+SHAP explanations
+ROC curves
+PR curves
+Confusion matrices
+Calibration curves
+Fragmentation vs reconstruction accuracy
+Corruption vs reconstruction accuracy
+Model performance
+Candidate reconstruction paths
+38. Dashboard
+Provide a simple interface where the user can:
+Upload/select a forensic disk image.
+Extract fragments.
+Run analysis.
+View detected fragments.
+View fragment clusters.
+View relationship graph.
+View anomaly scores.
+View candidate reconstructions.
+Compare candidate confidence.
+Export the final forensic report.
+39. Technology Stack
+Programming
+Python
+Data Processing
+NumPy
+Pandas
+Machine Learning
+Scikit-learn
+XGBoost
+Deep Learning
+PyTorch
+Graph Processing
+NetworkX
+Dimensionality Reduction
+Scikit-learn PCA
+t-SNE
+UMAP if required
+Explainability
+SHAP
+Visualization
+Matplotlib
+Seaborn
+Plotly where useful
+Digital Forensics
+Sleuth Kit
+pytsk3
+Custom disk-image/fragment processing
+Dashboard
+Streamlit
+40. Project Structure
+ForenSight/
+│
+├── dataset/
+│   ├── original_files/
+│   ├── disk_images/
+│   ├── fragments/
+│   ├── ground_truth/
+│   └── scenarios/
+│
+├── preprocessing/
+│   ├── normalize.py
+│   ├── sampling.py
+│   └── labels.py
+│
+├── extraction/
+│   ├── fragment_extractor.py
+│   └── filesystem_parser.py
+│
+├── features/
+│   ├── byte_features.py
+│   ├── statistical_features.py
+│   ├── structural_features.py
+│   ├── contextual_features.py
+│   └── pair_features.py
+│
+├── models/
+│   ├── logistic.py
+│   ├── random_forest.py
+│   ├── xgboost.py
+│   ├── mlp.py
+│   └── siamese.py
+│
+├── embeddings/
+│   ├── encoder.py
+│   └── similarity.py
+│
+├── clustering/
+│   ├── kmeans.py
+│   ├── dbscan.py
+│   └── visualization.py
+│
+├── anomaly/
+│   ├── isolation_forest.py
+│   └── lof.py
+│
+├── graph/
+│   ├── relationship_graph.py
+│   ├── graph_inference.py
+│   └── path_optimizer.py
+│
+├── ranking/
+│   └── candidate_ranker.py
+│
+├── reconstruction/
+│   ├── constraints.py
+│   └── reconstruct.py
+│
+├── calibration/
+│   └── confidence.py
+│
+├── explainability/
+│   ├── feature_importance.py
+│   └── shap_analysis.py
+│
+├── optimization/
+│   └── hyperparameter_search.py
+│
+├── evaluation/
+│   ├── metrics.py
+│   ├── cross_validation.py
+│   ├── ablation.py
+│   ├── benchmarks.py
+│   └── experiments.py
+│
+├── visualization/
+│   ├── embeddings.py
+│   ├── graphs.py
+│   └── performance.py
+│
+├── dashboard/
+│   └── app.py
+│
+└── reports/
+    └── report_generator.py
+41. Minimum Required AIML Implementation
+The project should NOT stop at comparing three classifiers.
+The minimum complete AIML implementation should contain:
+Data preprocessing
+Feature engineering
+Pairwise feature learning
+Supervised classification
+Probability estimation
+Ensemble learning
+Learned fragment embeddings
+Dimensionality reduction
+Clustering
+Anomaly detection
+Graph-based inference
+Reconstruction optimization
+Hyperparameter tuning
+Probability calibration
+Explainable AI
+Feature ablation
+Cross-validation
+Generalization testing
+End-to-end reconstruction evaluation
+42. Advanced AIML Extensions
+If sufficient time is available:
+Siamese networks
+Contrastive learning
+Triplet loss
+Learning-to-rank
+Graph neural networks
+Graph embeddings
+Bayesian uncertainty estimation
+Ensemble stacking
+Self-supervised fragment representation learning
+These should be treated as extensions rather than requirements for the initial working system.
+43. Final AIML Contribution
+The project should demonstrate multiple forms of machine intelligence:
+Supervised learning
+Learn whether fragments belong together or occur consecutively.
+Representation learning
+Learn useful fragment embeddings from raw/engineered representations.
+Unsupervised learning
+Discover fragment groups and identify unusual fragments.
+Graph inference
+Combine local fragment predictions into global reconstruction hypotheses.
+Optimization
+Search for the most plausible valid reconstruction.
+Ranking
+Rank multiple possible recovered artifacts.
+Calibration
+Convert model predictions into reliable confidence estimates.
+Explainability
+Show why the system selected a particular fragment relationship.
+Experimental ML
+Use ablation, cross-validation, hyperparameter optimization and generalization testing to scientifically evaluate the system.
+44. Core Design Principle
+The system must follow:
+ML predicts. Representation learning discovers. Clustering organizes. Anomaly detection challenges. Graph inference connects. Optimization reconstructs. Forensic constraints validate. Calibration quantifies uncertainty. Explainability justifies the result.
+The ML system must never automatically treat a prediction as forensic truth.
+45. Final Objective
+Demonstrate that:
+A combination of supervised learning, learned representations, unsupervised clustering and anomaly detection, graph-based inference, optimization, confidence calibration, and explainable AI can improve the identification and reconstruction of fragmented digital artifacts compared with conventional signature-based file carving.
+The final output should be a set of ranked, interpretable, evidence-supported reconstruction candidates, together with quantitative measurements showing where the AI/ML pipeline succeeds, where it fails, and how uncertainty changes under fragmentation, corruption, missing data, and competing fragment conditions.
