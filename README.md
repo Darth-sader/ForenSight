@@ -149,7 +149,7 @@ ForenSight/
 
 ```powershell
 # Clone the repository
-git clone https://github.com/<your-username>/ForenSight.git
+git clone https://github.com/Darth-sader/ForenSight.git
 cd ForenSight
 
 # Create and activate a Python virtual environment
