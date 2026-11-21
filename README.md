@@ -20,7 +20,7 @@
 
 ---
 
-## 🔍 Overview
+## Overview
 
 When digital storage devices undergo deletion, file system corruption, formatting, or hostile anti-forensic wiping, files frequently become **fragmented**, **interleaved**, and **scattered** across unallocated clusters. 
 
@@ -73,7 +73,7 @@ flowchart TD
 
 ---
 
-## ✨ Key Capabilities
+## Key Capabilities
 
 ### 1. Multimodal Fragment Representation
 - **Raw Byte Embeddings**: 1D Convolutional Neural Networks (CNN) and Multi-Layer Perceptrons (MLP) mapping 512-byte blocks into dense 32-dimensional latent vectors.
@@ -106,7 +106,7 @@ flowchart TD
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ForenSight/
@@ -137,7 +137,7 @@ ForenSight/
 
 ---
 
-## 🚀 Quick Start Guide
+## Quick Start Guide
 
 ### Prerequisites
 - **Python**: `3.10`, `3.11`, or `3.12`
@@ -194,7 +194,7 @@ npm run dev
 
 ---
 
-## 🛠️ CLI Pipeline Usage
+## CLI Pipeline Usage
 
 ForenSight can also be fully operated and benchmarked via the command line:
 
@@ -220,7 +220,7 @@ python scripts/analyse_image.py dataset/disk_images/S_A.img Scenario_A
 
 ---
 
-## 📊 Benchmark Scenarios
+## Benchmark Scenarios
 
 ForenSight is evaluated against synthetic and real-world forensic challenge sets:
 
