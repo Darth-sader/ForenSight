@@ -1,0 +1,42 @@
+{
+  "experiment_id": "phase1_baseline_leakage_free_42",
+  "version": "2.0.0-leakage_free",
+  "timestamp": "2026-11-22T15:00:57Z",
+  "duration_seconds": 135.71,
+  "seed": 42,
+  "context_mode": "metadata_independent",
+  "environment": {
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python_version": "3.12.5",
+    "torch_version": "2.14.1+cpu"
+  },
+  "split_manifest_hash": "0174b3a8b6c246ef9e68d763f1a4d6d4c90734f028d3fc05e386e28d5c2fc1ad",
+  "splits": {
+    "train_files": 28,
+    "val_files": 5,
+    "cal_files": 4,
+    "test_files": 13,
+    "total_files": 50
+  },
+  "artifact_hashes": {
+    "next_logistic_regression.joblib": "1acdea2ffd6a3beb12513301ae7c0f0bd5e4bad1d0403bfca5696a8e7c0ee726",
+    "next_mlp_torch.pt": "1bbfe013354cc0f537fb2b3454ace401b45d9c4caea9099c4155dadb834250fd",
+    "next_random_forest.joblib": "615de02a83ee98ae2b2ef11d43e4bf01d4c8435de76602d3f6221daad1d85865",
+    "next_xgboost.joblib": "fea0ffc851a8b29d24df2255a73f84fcde177160cda241e3423ade3900e682d5",
+    "preprocessor.joblib": "a95a288e48d5d337044788c9f25f779f9b9968b61c0e3a58f788a4a4d8402a8a",
+    "same_logistic_regression.joblib": "1ae49ad37a640616ace4f4485662dae5583d327c806197951dde47862d54311a",
+    "same_mlp_torch.pt": "b8d2b98fcdb5b23e30d7e187e39759072f3f72e3d7d0b767d72dde20b466b867",
+    "same_random_forest.joblib": "d9f2155b1fcb3f53ebc271a5424014035335def3c5aac5be4d5711b23091226d",
+    "same_xgboost.joblib": "6420133f5b2d3e7af4ec1c118fdc9bf0f42f0a441c73aa8b71a5acb55952a08f",
+    "siamese_cnn.pt": "428b4234b22f01fe4f5bac7d3a12be0346a3f7e6884424c3d1297160577b47a6",
+    "siamese_mlp.pt": "98283003b2d7374b9eafe58fe0f518ec2417d16bed6ab378b55750af4ab855a9"
+  },
+  "summary_metrics": {
+    "same_file_rf_auc": 0.8675,
+    "same_file_xgb_auc": 0.8632,
+    "next_frag_rf_auc": 0.8096,
+    "next_frag_xgb_auc": 0.807,
+    "siamese_mlp_same_auc": 0.8173,
+    "siamese_cnn_same_auc": 0.7011
+  }
+}

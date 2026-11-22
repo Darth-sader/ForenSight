@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forensight.org/schemas/v2/ground_truth_manifest.json",
+  "title": "ForenSight Ground-Truth Manifest Schema v2.0.0",
+  "description": "Formal schema for isolated forensic reconstruction ground-truth records.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "source_provenance",
+    "generation_timestamp",
+    "total_files",
+    "total_sectors",
+    "files",
+    "sectors"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2.0.0-ground_truth"
+    },
+    "scenario_id": {
+      "type": "string",
+      "description": "Identifier of the fragmentation/corruption scenario"
+    },
+    "source_provenance": {
+      "type": "object",
+      "required": ["generator", "seed", "corpus_version"],
+      "properties": {
+        "generator": { "type": "string" },
+        "seed": { "type": "integer" },
+        "corpus_version": { "type": "string" },
+        "interleave_factor": { "type": "integer" },
+        "corruption_level": { "type": "number" },
+        "missing_ratio": { "type": "number" },
+        "decoy_count": { "type": "integer" }
+      }
+    },
+    "generation_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "total_files": { "type": "integer", "minimum": 0 },
+    "total_sectors": { "type": "integer", "minimum": 0 },
+    "files": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "source_file_id",
+          "original_file_hash",
+          "file_size_bytes",
+          "total_fragments",
+          "file_type",
+          "logical_byte_offsets",
+          "logical_fragment_sequence",
+          "fragment_hashes",
+          "observed_physical_locations"
+        ],
+        "properties": {
+          "source_file_id": { "type": "string" },
+          "original_file_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "file_size_bytes": { "type": "integer", "minimum": 0 },
+          "total_fragments": { "type": "integer", "minimum": 1 },
+          "file_type": { "type": "string" },
+          "logical_byte_offsets": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 0 }
+          },
+          "logical_fragment_sequence": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 0 }
+          },
+          "fragment_hashes": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+          },
+          "observed_physical_locations": {
+            "type": "array",
+            "items": {
+              "type": ["integer", "null"],
+              "description": "Physical LBA on simulated disk, or null if missing/dropped"
+            }
+          },
+          "corruption_information": {
+            "type": "object",
+            "properties": {
+              "corrupted_fragment_count": { "type": "integer" },
+              "corrupted_indices": { "type": "array", "items": { "type": "integer" } }
+            }
+          },
+          "missing_fragment_information": {
+            "type": "object",
+            "properties": {
+              "missing_fragment_count": { "type": "integer" },
+              "missing_indices": { "type": "array", "items": { "type": "integer" } }
+            }
+          }
+        }
+      }
+    },
+    "sectors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sector_id",
+          "physical_lba",
+          "source_file_id",
+          "is_corrupted",
+          "is_decoy"
+        ],
+        "properties": {
+          "sector_id": { "type": "integer", "minimum": 0 },
+          "physical_lba": { "type": "integer", "minimum": 0 },
+          "source_file_id": { "type": ["string", "null"] },
+          "logical_offset": { "type": ["integer", "null"] },
+          "logical_sequence_index": { "type": ["integer", "null"] },
+          "original_fragment_id": { "type": ["string", "null"] },
+          "is_corrupted": { "type": "boolean" },
+          "corruption_level": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "is_missing": { "type": "boolean" },
+          "is_decoy": { "type": "boolean" },
+          "decoy_type": { "type": ["string", "null"] },
+          "original_file_hash": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

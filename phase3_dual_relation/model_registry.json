@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0-phase3",
+  "timestamp": "2026-11-22T15:44:13Z",
+  "models": {
+    "same_file_model_v2": {
+      "architecture": "RandomForestClassifier",
+      "n_estimators": 120,
+      "max_depth": 16,
+      "calibration": "sigmoid (Platt scaling)",
+      "artifact_path": "D:\\Projects\\ForenSight\\phase3_dual_relation\\artifacts\\same_file_rf.joblib",
+      "symmetry_guarantee": "Permutation invariant via 0.5 * (fwd + rev)"
+    },
+    "next_fragment_model_v2": {
+      "architecture": "RandomForestClassifier",
+      "n_estimators": 120,
+      "max_depth": 16,
+      "calibration": "sigmoid (Platt scaling)",
+      "artifact_path": "D:\\Projects\\ForenSight\\phase3_dual_relation\\artifacts\\next_fragment_rf.joblib",
+      "directionality": "Asymmetric directed transition + reverse consensus"
+    },
+    "multitask_dual_model": {
+      "architecture": "PyTorch MultiTaskNet (Shared 128D Trunk + Dual Task Heads)",
+      "shared_dim": 128,
+      "head_hidden": 64,
+      "lambda_same": 1.0,
+      "lambda_next": 1.0,
+      "calibration": "Platt scaling per head on calibration split",
+      "artifact_path": "D:\\Projects\\ForenSight\\phase3_dual_relation\\artifacts\\multitask_dual.pt"
+    }
+  }
+}

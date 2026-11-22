@@ -1,0 +1,886 @@
+{
+  "S_A": {
+    "manifest": {
+      "scenario_id": "S_A",
+      "description": "Scenario A - contiguous layout (doc \u00a77)",
+      "layout": "contiguous",
+      "corruption_pct": 0,
+      "missing_pct": 0,
+      "decoys": false,
+      "files": [
+        "photo03.jpeg",
+        "photo04.jpeg",
+        "photo05.jpeg",
+        "photo06.jpeg",
+        "photo07.jpeg",
+        "photo08.jpeg",
+        "photo09.jpeg",
+        "photo10.jpeg",
+        "scan13.png",
+        "scan14.png",
+        "scan15.png",
+        "scan16.png",
+        "scan17.png",
+        "scan18.png",
+        "report21.pdf",
+        "report22.pdf",
+        "report23.pdf",
+        "report24.pdf",
+        "report25.pdf",
+        "report26.pdf",
+        "archive29.zip",
+        "archive30.zip",
+        "archive31.zip",
+        "archive32.zip",
+        "doc35.docx",
+        "doc36.docx",
+        "doc37.docx",
+        "doc38.docx",
+        "sheet40.xlsx",
+        "sheet41.xlsx",
+        "sheet42.xlsx",
+        "audio44.mp3",
+        "audio45.mp3",
+        "audio46.mp3",
+        "video48.mp4",
+        "video49.mp4",
+        "video50.mp4"
+      ],
+      "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\S_A.img",
+      "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_A\\placements.csv",
+      "total_blocks": 2687,
+      "image_bytes": 1375744,
+      "n_present": 2583,
+      "n_missing": 0,
+      "n_decoys": 0,
+      "n_noise": 0,
+      "n_fragments": 2583
+    },
+    "placements_count": 2583,
+    "db_analyses": [
+      {
+        "analysis_id": "1526c5280528",
+        "name": "Scenario A - Contiguous Evidence",
+        "image_filename": "S_A_image.fsim",
+        "status": "queued",
+        "runtime_seconds": 0.0,
+        "summary": {},
+        "metrics": {},
+        "candidates_by_class": {}
+      },
+      {
+        "analysis_id": "98ea433e9b55",
+        "name": "Scenario A - Contiguous Evidence",
+        "image_filename": "S_A_image.fsim",
+        "status": "done",
+        "runtime_seconds": 5.4,
+        "summary": {
+          "n_fragments": 394,
+          "n_candidates": 10,
+          "n_anomalies": 1,
+          "n_clusters": 4,
+          "cluster_silhouette": 0.23507405817508698,
+          "graph": {
+            "nodes": 394,
+            "edges": 1970
+          },
+          "image_summary": {
+            "path": "dataset\\scenarios\\S_A\\placements.csv",
+            "size_bytes": 201800,
+            "block_size": 512,
+            "total_blocks": 394,
+            "fs_type": "RAW",
+            "volume_id": ""
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 1,
+            "LOW-CONFIDENCE RECOVERY": 9
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 1,
+            "avg_confidence": 0.9444444444444444
+          },
+          "LOW-CONFIDENCE RECOVERY": {
+            "count": 9,
+            "avg_confidence": 0.0
+          }
+        }
+      },
+      {
+        "analysis_id": "90fdfc47e60e",
+        "name": "Scenario S_A Evidence",
+        "image_filename": "S_A_image.fsim",
+        "status": "done",
+        "runtime_seconds": 7.8,
+        "summary": {
+          "n_fragments": 394,
+          "n_candidates": 10,
+          "n_anomalies": 1,
+          "n_clusters": 4,
+          "cluster_silhouette": 0.23507405817508698,
+          "graph": {
+            "nodes": 394,
+            "edges": 1970
+          },
+          "image_summary": {
+            "path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_A\\placements.csv",
+            "size_bytes": 201800,
+            "block_size": 512,
+            "total_blocks": 394,
+            "fs_type": "RAW",
+            "volume_id": ""
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 1,
+            "LOW-CONFIDENCE RECOVERY": 9
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 1,
+            "avg_confidence": 0.9444444444444444
+          },
+          "LOW-CONFIDENCE RECOVERY": {
+            "count": 9,
+            "avg_confidence": 0.0
+          }
+        }
+      },
+      {
+        "analysis_id": "1c7e397d057d",
+        "name": "S_A",
+        "image_filename": "9e33be46_S_A.fsim",
+        "status": "done",
+        "runtime_seconds": 14.5,
+        "summary": {
+          "n_fragments": 2687,
+          "n_candidates": 50,
+          "n_anomalies": 5,
+          "n_clusters": 6,
+          "cluster_silhouette": 0.7085819244384766,
+          "graph": {
+            "nodes": 400,
+            "edges": 672
+          },
+          "image_summary": {
+            "path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\uploads\\9e33be46_S_A.fsim",
+            "size_bytes": 1375744,
+            "block_size": 512,
+            "total_blocks": 2687,
+            "fs_type": "FSIM",
+            "volume_id": "FSS_A",
+            "allocated_blocks": 2647
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 27,
+            "UNCERTAIN": 10,
+            "LOW-CONFIDENCE RECOVERY": 13
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 27,
+            "avg_confidence": 0.9859943977591037
+          },
+          "LOW-CONFIDENCE RECOVERY": {
+            "count": 13,
+            "avg_confidence": 0.17297996121525533
+          },
+          "UNCERTAIN": {
+            "count": 10,
+            "avg_confidence": 0.7823529411764706
+          }
+        }
+      }
+    ]
+  },
+  "S_B": {
+    "manifest": {
+      "scenario_id": "S_B",
+      "description": "Scenario B - low fragmentation",
+      "layout": "low",
+      "corruption_pct": 0,
+      "missing_pct": 0,
+      "decoys": false,
+      "files": [
+        "photo03.jpeg",
+        "photo04.jpeg",
+        "photo05.jpeg",
+        "photo06.jpeg",
+        "photo07.jpeg",
+        "photo08.jpeg",
+        "photo09.jpeg",
+        "photo10.jpeg",
+        "scan13.png",
+        "scan14.png",
+        "scan15.png",
+        "scan16.png",
+        "scan17.png",
+        "scan18.png",
+        "report21.pdf",
+        "report22.pdf",
+        "report23.pdf",
+        "report24.pdf",
+        "report25.pdf",
+        "report26.pdf",
+        "archive29.zip",
+        "archive30.zip",
+        "archive31.zip",
+        "archive32.zip",
+        "doc35.docx",
+        "doc36.docx",
+        "doc37.docx",
+        "doc38.docx",
+        "sheet40.xlsx",
+        "sheet41.xlsx",
+        "sheet42.xlsx",
+        "audio44.mp3",
+        "audio45.mp3",
+        "audio46.mp3",
+        "video48.mp4",
+        "video49.mp4",
+        "video50.mp4"
+      ],
+      "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\S_B.img",
+      "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_B\\placements.csv",
+      "total_blocks": 4898,
+      "image_bytes": 2507776,
+      "n_present": 2583,
+      "n_missing": 0,
+      "n_decoys": 0,
+      "n_noise": 2211,
+      "n_fragments": 2583
+    },
+    "placements_count": 4794,
+    "db_analyses": [
+      {
+        "analysis_id": "1200e3e5ea03",
+        "name": "S_B",
+        "image_filename": "3b49163f_S_B.fsim",
+        "status": "done",
+        "runtime_seconds": 49.1,
+        "summary": {
+          "n_fragments": 4898,
+          "n_candidates": 50,
+          "n_anomalies": 3,
+          "n_clusters": 6,
+          "cluster_silhouette": 0.6502969861030579,
+          "graph": {
+            "nodes": 400,
+            "edges": 630
+          },
+          "image_summary": {
+            "path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\uploads\\3b49163f_S_B.fsim",
+            "size_bytes": 2507776,
+            "block_size": 512,
+            "total_blocks": 4898,
+            "fs_type": "FSIM",
+            "volume_id": "FSS_B",
+            "allocated_blocks": 2647
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 47,
+            "UNCERTAIN": 3
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 47,
+            "avg_confidence": 0.9495475323799578
+          },
+          "UNCERTAIN": {
+            "count": 3,
+            "avg_confidence": 0.7577777777777778
+          }
+        }
+      }
+    ]
+  },
+  "S_C": {
+    "manifest": {
+      "scenario_id": "S_C",
+      "description": "Scenario C - high fragmentation",
+      "layout": "high",
+      "corruption_pct": 0,
+      "missing_pct": 0,
+      "decoys": false,
+      "files": [
+        "photo03.jpeg",
+        "photo04.jpeg",
+        "photo05.jpeg",
+        "photo06.jpeg",
+        "photo07.jpeg",
+        "photo08.jpeg",
+        "photo09.jpeg",
+        "photo10.jpeg",
+        "scan13.png",
+        "scan14.png",
+        "scan15.png",
+        "scan16.png",
+        "scan17.png",
+        "scan18.png",
+        "report21.pdf",
+        "report22.pdf",
+        "report23.pdf",
+        "report24.pdf",
+        "report25.pdf",
+        "report26.pdf",
+        "archive29.zip",
+        "archive30.zip",
+        "archive31.zip",
+        "archive32.zip",
+        "doc35.docx",
+        "doc36.docx",
+        "doc37.docx",
+        "doc38.docx",
+        "sheet40.xlsx",
+        "sheet41.xlsx",
+        "sheet42.xlsx",
+        "audio44.mp3",
+        "audio45.mp3",
+        "audio46.mp3",
+        "video48.mp4",
+        "video49.mp4",
+        "video50.mp4"
+      ],
+      "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\S_C.img",
+      "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_C\\placements.csv",
+      "total_blocks": 10408,
+      "image_bytes": 5328896,
+      "n_present": 2583,
+      "n_missing": 0,
+      "n_decoys": 0,
+      "n_noise": 7721,
+      "n_fragments": 2583
+    },
+    "placements_count": 10304,
+    "db_analyses": [
+      {
+        "analysis_id": "260f5f56c346",
+        "name": "S_C",
+        "image_filename": "dacd6e11_S_C.fsim",
+        "status": "done",
+        "runtime_seconds": 92.8,
+        "summary": {
+          "n_fragments": 10408,
+          "n_candidates": 50,
+          "n_anomalies": 3,
+          "n_clusters": 4,
+          "cluster_silhouette": 0.6747592091560364,
+          "graph": {
+            "nodes": 400,
+            "edges": 510
+          },
+          "image_summary": {
+            "path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\uploads\\dacd6e11_S_C.fsim",
+            "size_bytes": 5328896,
+            "block_size": 512,
+            "total_blocks": 10408,
+            "fs_type": "FSIM",
+            "volume_id": "FSS_C",
+            "allocated_blocks": 2647
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 42,
+            "UNCERTAIN": 8
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 42,
+            "avg_confidence": 0.9411951447245566
+          },
+          "UNCERTAIN": {
+            "count": 8,
+            "avg_confidence": 0.7782376283846871
+          }
+        }
+      },
+      {
+        "analysis_id": "6f143654f1b6",
+        "name": "Scenario S_C Evidence",
+        "image_filename": "S_C_image.fsim",
+        "status": "done",
+        "runtime_seconds": 30.1,
+        "summary": {
+          "n_fragments": 1163,
+          "n_candidates": 50,
+          "n_anomalies": 1,
+          "n_clusters": 4,
+          "cluster_silhouette": 0.16176164150238037,
+          "graph": {
+            "nodes": 400,
+            "edges": 1270
+          },
+          "image_summary": {
+            "path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_C\\placements.csv",
+            "size_bytes": 595947,
+            "block_size": 512,
+            "total_blocks": 1163,
+            "fs_type": "RAW",
+            "volume_id": ""
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 7,
+            "LOW-CONFIDENCE RECOVERY": 25,
+            "UNCERTAIN": 18
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 7,
+            "avg_confidence": 0.933015873015873
+          },
+          "LOW-CONFIDENCE RECOVERY": {
+            "count": 25,
+            "avg_confidence": 0.017844846355176275
+          },
+          "UNCERTAIN": {
+            "count": 18,
+            "avg_confidence": 0.8255218855218855
+          }
+        }
+      }
+    ]
+  },
+  "S_D01": {
+    "manifest": {
+      "scenario_id": "S_D01",
+      "description": "Scenario D - 1% byte corruption",
+      "layout": "contiguous",
+      "corruption_pct": 0.01,
+      "missing_pct": 0,
+      "decoys": false,
+      "files": [
+        "photo03.jpeg",
+        "photo04.jpeg",
+        "photo05.jpeg",
+        "photo06.jpeg",
+        "photo07.jpeg",
+        "photo08.jpeg",
+        "photo09.jpeg",
+        "photo10.jpeg",
+        "scan13.png",
+        "scan14.png",
+        "scan15.png",
+        "scan16.png",
+        "scan17.png",
+        "scan18.png",
+        "report21.pdf",
+        "report22.pdf",
+        "report23.pdf",
+        "report24.pdf",
+        "report25.pdf",
+        "report26.pdf",
+        "archive29.zip",
+        "archive30.zip",
+        "archive31.zip",
+        "archive32.zip",
+        "doc35.docx",
+        "doc36.docx",
+        "doc37.docx",
+        "doc38.docx",
+        "sheet40.xlsx",
+        "sheet41.xlsx",
+        "sheet42.xlsx",
+        "audio44.mp3",
+        "audio45.mp3",
+        "audio46.mp3",
+        "video48.mp4",
+        "video49.mp4",
+        "video50.mp4"
+      ],
+      "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\S_D01.img",
+      "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_D01\\placements.csv",
+      "total_blocks": 2687,
+      "image_bytes": 1375744,
+      "n_present": 2583,
+      "n_missing": 0,
+      "n_decoys": 0,
+      "n_noise": 0,
+      "n_fragments": 2583
+    },
+    "placements_count": 2583,
+    "db_analyses": [
+      {
+        "analysis_id": "c5592cf2b1f8",
+        "name": "S_D01",
+        "image_filename": "4b15dd33_S_D01.fsim",
+        "status": "done",
+        "runtime_seconds": 49.3,
+        "summary": {
+          "n_fragments": 2687,
+          "n_candidates": 50,
+          "n_anomalies": 4,
+          "n_clusters": 6,
+          "cluster_silhouette": 0.7075402736663818,
+          "graph": {
+            "nodes": 400,
+            "edges": 710
+          },
+          "image_summary": {
+            "path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\uploads\\4b15dd33_S_D01.fsim",
+            "size_bytes": 1375744,
+            "block_size": 512,
+            "total_blocks": 2687,
+            "fs_type": "FSIM",
+            "volume_id": "FSS_D01",
+            "allocated_blocks": 2647
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 17,
+            "UNCERTAIN": 12,
+            "LOW-CONFIDENCE RECOVERY": 21
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 17,
+            "avg_confidence": 0.9933546455380312
+          },
+          "LOW-CONFIDENCE RECOVERY": {
+            "count": 21,
+            "avg_confidence": 0.0
+          },
+          "UNCERTAIN": {
+            "count": 12,
+            "avg_confidence": 0.8094957983193277
+          }
+        }
+      }
+    ]
+  },
+  "S_D20": {
+    "manifest": {
+      "scenario_id": "S_D20",
+      "description": "Scenario D - 20% byte corruption",
+      "layout": "contiguous",
+      "corruption_pct": 0.2,
+      "missing_pct": 0,
+      "decoys": false,
+      "files": [
+        "photo03.jpeg",
+        "photo04.jpeg",
+        "photo05.jpeg",
+        "photo06.jpeg",
+        "photo07.jpeg",
+        "photo08.jpeg",
+        "photo09.jpeg",
+        "photo10.jpeg",
+        "scan13.png",
+        "scan14.png",
+        "scan15.png",
+        "scan16.png",
+        "scan17.png",
+        "scan18.png",
+        "report21.pdf",
+        "report22.pdf",
+        "report23.pdf",
+        "report24.pdf",
+        "report25.pdf",
+        "report26.pdf",
+        "archive29.zip",
+        "archive30.zip",
+        "archive31.zip",
+        "archive32.zip",
+        "doc35.docx",
+        "doc36.docx",
+        "doc37.docx",
+        "doc38.docx",
+        "sheet40.xlsx",
+        "sheet41.xlsx",
+        "sheet42.xlsx",
+        "audio44.mp3",
+        "audio45.mp3",
+        "audio46.mp3",
+        "video48.mp4",
+        "video49.mp4",
+        "video50.mp4"
+      ],
+      "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\S_D20.img",
+      "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_D20\\placements.csv",
+      "total_blocks": 2687,
+      "image_bytes": 1375744,
+      "n_present": 2583,
+      "n_missing": 0,
+      "n_decoys": 0,
+      "n_noise": 0,
+      "n_fragments": 2583
+    },
+    "placements_count": 2583,
+    "db_analyses": [
+      {
+        "analysis_id": "1591f2a400d2",
+        "name": "S_D20",
+        "image_filename": "cb0c05b6_S_D20.fsim",
+        "status": "done",
+        "runtime_seconds": 30.8,
+        "summary": {
+          "n_fragments": 2687,
+          "n_candidates": 50,
+          "n_anomalies": 5,
+          "n_clusters": 6,
+          "cluster_silhouette": 0.6719918251037598,
+          "graph": {
+            "nodes": 400,
+            "edges": 717
+          },
+          "image_summary": {
+            "path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\uploads\\cb0c05b6_S_D20.fsim",
+            "size_bytes": 1375744,
+            "block_size": 512,
+            "total_blocks": 2687,
+            "fs_type": "FSIM",
+            "volume_id": "FSS_D20",
+            "allocated_blocks": 2647
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 14,
+            "UNCERTAIN": 18,
+            "LOW-CONFIDENCE RECOVERY": 18
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 14,
+            "avg_confidence": 0.9809470454848607
+          },
+          "LOW-CONFIDENCE RECOVERY": {
+            "count": 18,
+            "avg_confidence": 0.2106461238848643
+          },
+          "UNCERTAIN": {
+            "count": 18,
+            "avg_confidence": 0.7547131445170661
+          }
+        }
+      }
+    ]
+  },
+  "S_E05": {
+    "manifest": {
+      "scenario_id": "S_E05",
+      "description": "Scenario E - 5% missing fragments",
+      "layout": "contiguous",
+      "corruption_pct": 0,
+      "missing_pct": 0.05,
+      "decoys": false,
+      "files": [
+        "photo03.jpeg",
+        "photo04.jpeg",
+        "photo05.jpeg",
+        "photo06.jpeg",
+        "photo07.jpeg",
+        "photo08.jpeg",
+        "photo09.jpeg",
+        "photo10.jpeg",
+        "scan13.png",
+        "scan14.png",
+        "scan15.png",
+        "scan16.png",
+        "scan17.png",
+        "scan18.png",
+        "report21.pdf",
+        "report22.pdf",
+        "report23.pdf",
+        "report24.pdf",
+        "report25.pdf",
+        "report26.pdf",
+        "archive29.zip",
+        "archive30.zip",
+        "archive31.zip",
+        "archive32.zip",
+        "doc35.docx",
+        "doc36.docx",
+        "doc37.docx",
+        "doc38.docx",
+        "sheet40.xlsx",
+        "sheet41.xlsx",
+        "sheet42.xlsx",
+        "audio44.mp3",
+        "audio45.mp3",
+        "audio46.mp3",
+        "video48.mp4",
+        "video49.mp4",
+        "video50.mp4"
+      ],
+      "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\S_E05.img",
+      "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_E05\\placements.csv",
+      "total_blocks": 2687,
+      "image_bytes": 1431552,
+      "n_present": 2474,
+      "n_missing": 109,
+      "n_decoys": 0,
+      "n_noise": 0,
+      "n_fragments": 2474
+    },
+    "placements_count": 2583,
+    "db_analyses": [
+      {
+        "analysis_id": "3b7753de0300",
+        "name": "S_E05",
+        "image_filename": "c9385dd4_S_E05.fsim",
+        "status": "done",
+        "runtime_seconds": 20.2,
+        "summary": {
+          "n_fragments": 2687,
+          "n_candidates": 50,
+          "n_anomalies": 9,
+          "n_clusters": 9,
+          "cluster_silhouette": 0.7126774787902832,
+          "graph": {
+            "nodes": 400,
+            "edges": 764
+          },
+          "image_summary": {
+            "path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\uploads\\c9385dd4_S_E05.fsim",
+            "size_bytes": 1431552,
+            "block_size": 512,
+            "total_blocks": 2687,
+            "fs_type": "FSIM",
+            "volume_id": "FSS_E05",
+            "allocated_blocks": 2538
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 29,
+            "LOW-CONFIDENCE RECOVERY": 9,
+            "UNCERTAIN": 12
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 29,
+            "avg_confidence": 0.9840686415197899
+          },
+          "LOW-CONFIDENCE RECOVERY": {
+            "count": 9,
+            "avg_confidence": 0.25874883286647987
+          },
+          "UNCERTAIN": {
+            "count": 12,
+            "avg_confidence": 0.7414565826330533
+          }
+        }
+      }
+    ]
+  },
+  "S_E20": {
+    "manifest": {
+      "scenario_id": "S_E20",
+      "description": "Scenario E - 20% missing fragments",
+      "layout": "contiguous",
+      "corruption_pct": 0,
+      "missing_pct": 0.2,
+      "decoys": false,
+      "files": [
+        "photo03.jpeg",
+        "photo04.jpeg",
+        "photo05.jpeg",
+        "photo06.jpeg",
+        "photo07.jpeg",
+        "photo08.jpeg",
+        "photo09.jpeg",
+        "photo10.jpeg",
+        "scan13.png",
+        "scan14.png",
+        "scan15.png",
+        "scan16.png",
+        "scan17.png",
+        "scan18.png",
+        "report21.pdf",
+        "report22.pdf",
+        "report23.pdf",
+        "report24.pdf",
+        "report25.pdf",
+        "report26.pdf",
+        "archive29.zip",
+        "archive30.zip",
+        "archive31.zip",
+        "archive32.zip",
+        "doc35.docx",
+        "doc36.docx",
+        "doc37.docx",
+        "doc38.docx",
+        "sheet40.xlsx",
+        "sheet41.xlsx",
+        "sheet42.xlsx",
+        "audio44.mp3",
+        "audio45.mp3",
+        "audio46.mp3",
+        "video48.mp4",
+        "video49.mp4",
+        "video50.mp4"
+      ],
+      "image_path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\S_E20.img",
+      "placements_path": "D:\\Projects\\ForenSight\\dataset\\scenarios\\S_E20\\placements.csv",
+      "total_blocks": 2687,
+      "image_bytes": 1628672,
+      "n_present": 2089,
+      "n_missing": 494,
+      "n_decoys": 0,
+      "n_noise": 0,
+      "n_fragments": 2089
+    },
+    "placements_count": 2583,
+    "db_analyses": [
+      {
+        "analysis_id": "c2b349ddf8ed",
+        "name": "S_E20",
+        "image_filename": "6f638546_S_E20.fsim",
+        "status": "done",
+        "runtime_seconds": 32.1,
+        "summary": {
+          "n_fragments": 2687,
+          "n_candidates": 50,
+          "n_anomalies": 5,
+          "n_clusters": 9,
+          "cluster_silhouette": 0.7548203468322754,
+          "graph": {
+            "nodes": 400,
+            "edges": 833
+          },
+          "image_summary": {
+            "path": "D:\\Projects\\ForenSight\\dataset\\disk_images\\uploads\\6f638546_S_E20.fsim",
+            "size_bytes": 1628672,
+            "block_size": 512,
+            "total_blocks": 2687,
+            "fs_type": "FSIM",
+            "volume_id": "FSS_E20",
+            "allocated_blocks": 2153
+          },
+          "class_counts": {
+            "HIGH-CONFIDENCE RECOVERY": 23,
+            "LOW-CONFIDENCE RECOVERY": 6,
+            "UNCERTAIN": 21
+          }
+        },
+        "metrics": {},
+        "candidates_by_class": {
+          "HIGH-CONFIDENCE RECOVERY": {
+            "count": 23,
+            "avg_confidence": 0.9857508220679577
+          },
+          "LOW-CONFIDENCE RECOVERY": {
+            "count": 6,
+            "avg_confidence": 0.2340616246498599
+          },
+          "UNCERTAIN": {
+            "count": 21,
+            "avg_confidence": 0.7436094437775109
+          }
+        }
+      }
+    ]
+  }
+}

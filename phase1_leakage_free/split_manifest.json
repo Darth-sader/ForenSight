@@ -1,0 +1,472 @@
+{
+  "version": "2.0.0-leakage_free",
+  "seed": 42,
+  "counts": {
+    "train_files": 28,
+    "val_files": 5,
+    "cal_files": 4,
+    "test_files": 13,
+    "total_files": 50
+  },
+  "train_files": [
+    "archive29.zip",
+    "archive30.zip",
+    "archive31.zip",
+    "archive32.zip",
+    "audio44.mp3",
+    "doc35.docx",
+    "doc36.docx",
+    "doc37.docx",
+    "photo03.jpeg",
+    "photo04.jpeg",
+    "photo05.jpeg",
+    "photo06.jpeg",
+    "photo07.jpeg",
+    "photo08.jpeg",
+    "report21.pdf",
+    "report22.pdf",
+    "report23.pdf",
+    "report24.pdf",
+    "report25.pdf",
+    "report26.pdf",
+    "scan13.png",
+    "scan15.png",
+    "scan17.png",
+    "scan18.png",
+    "sheet40.xlsx",
+    "sheet41.xlsx",
+    "video48.mp4",
+    "video49.mp4"
+  ],
+  "val_files": [
+    "doc38.docx",
+    "photo09.jpeg",
+    "photo10.jpeg",
+    "scan16.png",
+    "sheet42.xlsx"
+  ],
+  "cal_files": [
+    "audio45.mp3",
+    "audio46.mp3",
+    "scan14.png",
+    "video50.mp4"
+  ],
+  "test_files": [
+    "archive27.zip",
+    "archive28.zip",
+    "audio43.mp3",
+    "doc33.docx",
+    "doc34.docx",
+    "photo01.jpeg",
+    "photo02.jpeg",
+    "report19.pdf",
+    "report20.pdf",
+    "scan11.png",
+    "scan12.png",
+    "sheet39.xlsx",
+    "video47.mp4"
+  ],
+  "file_metadata": {
+    "photo01.jpeg": {
+      "source_file": "photo01.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "holdout",
+      "similar_group": "jpeg-g0",
+      "fragment_count": 33,
+      "byte_count": 16460
+    },
+    "photo02.jpeg": {
+      "source_file": "photo02.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "holdout",
+      "similar_group": "jpeg-g0",
+      "fragment_count": 35,
+      "byte_count": 17920
+    },
+    "photo03.jpeg": {
+      "source_file": "photo03.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "train",
+      "similar_group": "jpeg-g1",
+      "fragment_count": 30,
+      "byte_count": 15025
+    },
+    "photo04.jpeg": {
+      "source_file": "photo04.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "train",
+      "similar_group": "jpeg-g1",
+      "fragment_count": 26,
+      "byte_count": 12852
+    },
+    "photo05.jpeg": {
+      "source_file": "photo05.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "train",
+      "similar_group": "jpeg-g2",
+      "fragment_count": 33,
+      "byte_count": 16478
+    },
+    "photo06.jpeg": {
+      "source_file": "photo06.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "train",
+      "similar_group": "jpeg-g2",
+      "fragment_count": 30,
+      "byte_count": 15256
+    },
+    "photo07.jpeg": {
+      "source_file": "photo07.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "train",
+      "similar_group": "jpeg-g3",
+      "fragment_count": 29,
+      "byte_count": 14442
+    },
+    "photo08.jpeg": {
+      "source_file": "photo08.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "train",
+      "similar_group": "jpeg-g3",
+      "fragment_count": 29,
+      "byte_count": 14431
+    },
+    "photo09.jpeg": {
+      "source_file": "photo09.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "train",
+      "similar_group": "jpeg-g4",
+      "fragment_count": 28,
+      "byte_count": 13994
+    },
+    "photo10.jpeg": {
+      "source_file": "photo10.jpeg",
+      "file_type": "JPEG",
+      "split_orig": "train",
+      "similar_group": "jpeg-g4",
+      "fragment_count": 26,
+      "byte_count": 13251
+    },
+    "scan11.png": {
+      "source_file": "scan11.png",
+      "file_type": "PNG",
+      "split_orig": "holdout",
+      "similar_group": "",
+      "fragment_count": 52,
+      "byte_count": 26602
+    },
+    "scan12.png": {
+      "source_file": "scan12.png",
+      "file_type": "PNG",
+      "split_orig": "holdout",
+      "similar_group": "",
+      "fragment_count": 55,
+      "byte_count": 27673
+    },
+    "scan13.png": {
+      "source_file": "scan13.png",
+      "file_type": "PNG",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 64,
+      "byte_count": 32591
+    },
+    "scan14.png": {
+      "source_file": "scan14.png",
+      "file_type": "PNG",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 44,
+      "byte_count": 22201
+    },
+    "scan15.png": {
+      "source_file": "scan15.png",
+      "file_type": "PNG",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 56,
+      "byte_count": 28215
+    },
+    "scan16.png": {
+      "source_file": "scan16.png",
+      "file_type": "PNG",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 51,
+      "byte_count": 25826
+    },
+    "scan17.png": {
+      "source_file": "scan17.png",
+      "file_type": "PNG",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 71,
+      "byte_count": 36352
+    },
+    "scan18.png": {
+      "source_file": "scan18.png",
+      "file_type": "PNG",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 51,
+      "byte_count": 25621
+    },
+    "report19.pdf": {
+      "source_file": "report19.pdf",
+      "file_type": "PDF",
+      "split_orig": "holdout",
+      "similar_group": "pdf-g0",
+      "fragment_count": 99,
+      "byte_count": 50614
+    },
+    "report20.pdf": {
+      "source_file": "report20.pdf",
+      "file_type": "PDF",
+      "split_orig": "holdout",
+      "similar_group": "pdf-g0",
+      "fragment_count": 139,
+      "byte_count": 70659
+    },
+    "report21.pdf": {
+      "source_file": "report21.pdf",
+      "file_type": "PDF",
+      "split_orig": "train",
+      "similar_group": "pdf-g1",
+      "fragment_count": 93,
+      "byte_count": 47512
+    },
+    "report22.pdf": {
+      "source_file": "report22.pdf",
+      "file_type": "PDF",
+      "split_orig": "train",
+      "similar_group": "pdf-g1",
+      "fragment_count": 78,
+      "byte_count": 39432
+    },
+    "report23.pdf": {
+      "source_file": "report23.pdf",
+      "file_type": "PDF",
+      "split_orig": "train",
+      "similar_group": "pdf-g2",
+      "fragment_count": 97,
+      "byte_count": 49554
+    },
+    "report24.pdf": {
+      "source_file": "report24.pdf",
+      "file_type": "PDF",
+      "split_orig": "train",
+      "similar_group": "pdf-g2",
+      "fragment_count": 126,
+      "byte_count": 64323
+    },
+    "report25.pdf": {
+      "source_file": "report25.pdf",
+      "file_type": "PDF",
+      "split_orig": "train",
+      "similar_group": "pdf-g3",
+      "fragment_count": 95,
+      "byte_count": 48149
+    },
+    "report26.pdf": {
+      "source_file": "report26.pdf",
+      "file_type": "PDF",
+      "split_orig": "train",
+      "similar_group": "pdf-g3",
+      "fragment_count": 90,
+      "byte_count": 45726
+    },
+    "archive27.zip": {
+      "source_file": "archive27.zip",
+      "file_type": "ZIP",
+      "split_orig": "holdout",
+      "similar_group": "",
+      "fragment_count": 13,
+      "byte_count": 6328
+    },
+    "archive28.zip": {
+      "source_file": "archive28.zip",
+      "file_type": "ZIP",
+      "split_orig": "holdout",
+      "similar_group": "",
+      "fragment_count": 19,
+      "byte_count": 9631
+    },
+    "archive29.zip": {
+      "source_file": "archive29.zip",
+      "file_type": "ZIP",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 16,
+      "byte_count": 7698
+    },
+    "archive30.zip": {
+      "source_file": "archive30.zip",
+      "file_type": "ZIP",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 19,
+      "byte_count": 9304
+    },
+    "archive31.zip": {
+      "source_file": "archive31.zip",
+      "file_type": "ZIP",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 27,
+      "byte_count": 13680
+    },
+    "archive32.zip": {
+      "source_file": "archive32.zip",
+      "file_type": "ZIP",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 32,
+      "byte_count": 16219
+    },
+    "doc33.docx": {
+      "source_file": "doc33.docx",
+      "file_type": "DOCX",
+      "split_orig": "holdout",
+      "similar_group": "",
+      "fragment_count": 9,
+      "byte_count": 4434
+    },
+    "doc34.docx": {
+      "source_file": "doc34.docx",
+      "file_type": "DOCX",
+      "split_orig": "holdout",
+      "similar_group": "",
+      "fragment_count": 7,
+      "byte_count": 3558
+    },
+    "doc35.docx": {
+      "source_file": "doc35.docx",
+      "file_type": "DOCX",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 7,
+      "byte_count": 3080
+    },
+    "doc36.docx": {
+      "source_file": "doc36.docx",
+      "file_type": "DOCX",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 5,
+      "byte_count": 2441
+    },
+    "doc37.docx": {
+      "source_file": "doc37.docx",
+      "file_type": "DOCX",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 6,
+      "byte_count": 3049
+    },
+    "doc38.docx": {
+      "source_file": "doc38.docx",
+      "file_type": "DOCX",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 9,
+      "byte_count": 4582
+    },
+    "sheet39.xlsx": {
+      "source_file": "sheet39.xlsx",
+      "file_type": "XLSX",
+      "split_orig": "holdout",
+      "similar_group": "",
+      "fragment_count": 12,
+      "byte_count": 5637
+    },
+    "sheet40.xlsx": {
+      "source_file": "sheet40.xlsx",
+      "file_type": "XLSX",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 14,
+      "byte_count": 6917
+    },
+    "sheet41.xlsx": {
+      "source_file": "sheet41.xlsx",
+      "file_type": "XLSX",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 9,
+      "byte_count": 4524
+    },
+    "sheet42.xlsx": {
+      "source_file": "sheet42.xlsx",
+      "file_type": "XLSX",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 18,
+      "byte_count": 9032
+    },
+    "audio43.mp3": {
+      "source_file": "audio43.mp3",
+      "file_type": "MP3",
+      "split_orig": "holdout",
+      "similar_group": "",
+      "fragment_count": 195,
+      "byte_count": 99561
+    },
+    "audio44.mp3": {
+      "source_file": "audio44.mp3",
+      "file_type": "MP3",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 184,
+      "byte_count": 94170
+    },
+    "audio45.mp3": {
+      "source_file": "audio45.mp3",
+      "file_type": "MP3",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 188,
+      "byte_count": 95936
+    },
+    "audio46.mp3": {
+      "source_file": "audio46.mp3",
+      "file_type": "MP3",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 215,
+      "byte_count": 109704
+    },
+    "video47.mp4": {
+      "source_file": "video47.mp4",
+      "file_type": "MP4",
+      "split_orig": "holdout",
+      "similar_group": "",
+      "fragment_count": 287,
+      "byte_count": 146834
+    },
+    "video48.mp4": {
+      "source_file": "video48.mp4",
+      "file_type": "MP4",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 242,
+      "byte_count": 123842
+    },
+    "video49.mp4": {
+      "source_file": "video49.mp4",
+      "file_type": "MP4",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 196,
+      "byte_count": 100120
+    },
+    "video50.mp4": {
+      "source_file": "video50.mp4",
+      "file_type": "MP4",
+      "split_orig": "train",
+      "similar_group": "",
+      "fragment_count": 249,
+      "byte_count": 127008
+    }
+  },
+  "manifest_hash": "0174b3a8b6c246ef9e68d763f1a4d6d4c90734f028d3fc05e386e28d5c2fc1ad"
+}

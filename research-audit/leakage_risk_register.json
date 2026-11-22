@@ -1,0 +1,76 @@
+[
+  {
+    "id": "LR-01",
+    "risk_title": "Ground-Truth Offset and Adjacency Ingestion in Training Context Features",
+    "severity": "CRITICAL",
+    "affected_components": [
+      "preprocessing/labels.py (lines 72-73)",
+      "features/contextual_features.py (lines 19-20)",
+      "features/pair_features.py (lines 102-117)"
+    ],
+    "mechanism": "When building pair datasets, metas['physical_offset'] is assigned as int(r['offset_in_source']) and metas['cluster'] is assigned as int(r['original_position']). Consequently, pair features 'physical_adjacent', 'physical_dist_log', 'physical_close', and 'cluster_dist' directly compute differences on source-file ground truth offsets. For all positive next-fragment pairs, physical_adjacent is identically 1.0 and cluster_dist is log1p(1). During real forensic inference on fragmented disk images, physical_offset is disk-relative, breaking the learned relationship.",
+    "impact": "Artificially inflates next-fragment classification AUC to 0.998 on holdout sets where files are evaluated in isolation, while degrading performance on realistic fragmented disks.",
+    "remediation": "Do not train pairwise transition models on source offsets. Contextual distance features must only use simulated or true disk image layout offsets during training, or context features should be trained with random/fragmented cluster offsets."
+  },
+  {
+    "id": "LR-02",
+    "risk_title": "Full Corpus Visibility in FeatureEngine Matrix Normalization",
+    "severity": "HIGH",
+    "affected_components": [
+      "preprocessing/labels.py (lines 91-95)",
+      "features/__init__.py (lines 30-65)",
+      "features/contextual_features.py (line 30)"
+    ],
+    "mechanism": "FeatureEngine is instantiated once over the concatenated array of all training fragments, holdout fragments, and corrupted variants. Global statistics such as max_offset (line 30 of contextual_features.py) are calculated across all 50 files including the held-out test partition.",
+    "impact": "Data leakage of global scale parameters from held-out test partitions into training features.",
+    "remediation": "Instantiate separate FeatureEngine instances for train, validation, and holdout splits, or fit normalization parameters strictly on the training partition and apply them out-of-sample."
+  },
+  {
+    "id": "LR-03",
+    "risk_title": "Asymmetric Negative Pair Grouping in Cross-Validation Splitting",
+    "severity": "HIGH",
+    "affected_components": [
+      "preprocessing/sampling.py (lines 101, 107, 124, 133, 141)",
+      "preprocessing/labels.py (lines 122-129)",
+      "evaluation/cross_validation.py (line 62)"
+    ],
+    "mechanism": "Pair samples assign the 'group' identifier solely using fragment A (the source file of fragment i). In negative pairs (i, j), fragment j is chosen from another file. In train/val splits and GroupKFold, while fragment A files are disjoint between train and validation, fragment B files are unconstrained and can appear in both partitions.",
+    "impact": "Negative pairs in validation and test folds contain fragment representations seen during training, compromising strict file-level isolation.",
+    "remediation": "Constrain negative pair sampling so that both fragment A and fragment B belong exclusively to files within the assigned partition."
+  },
+  {
+    "id": "LR-04",
+    "risk_title": "Omission of Same-File Predictions During Graph Inference (Dead Model Architecture)",
+    "severity": "CRITICAL",
+    "affected_components": [
+      "reconstruction/reconstruct.py (line 139)",
+      "pipeline.py (line 321)"
+    ],
+    "mechanism": "In pipeline.py, both same_ensemble and next_ensemble are trained. However, in analyse_image (line 321), only next_ensemble is passed to ReconstructionEngine. In reconstruct.py line 139, build_relationship_graph is called with: build_relationship_graph(..., scores['calibrated'], scores['calibrated'], ...), passing the next-fragment probability as BOTH p_next and p_same! The same-file model is completely omitted during inference.",
+    "impact": "Invalidates the core research claim of 'dual-relation learning' in reconstruction inference; graph edge construction relies solely on directed next-fragment predictions and ignores same-file membership.",
+    "remediation": "Evaluate both same_ensemble and next_ensemble in ReconstructionEngine._score_all_pairs and pass distinct p_same and p_next probabilities to build_relationship_graph."
+  },
+  {
+    "id": "LR-05",
+    "risk_title": "Global File Size Statistics Leakage into Constraint Validation",
+    "severity": "MEDIUM",
+    "affected_components": [
+      "pipeline.py (lines 72-85)",
+      "reconstruction/constraints.py (lines 101-106)"
+    ],
+    "mechanism": "_file_size_stats() reads all rows from dataset/ground_truth/files.csv, including the 13 held-out files, to calculate median, 10th percentile, and 90th percentile file sizes per format. These statistics are passed to ForensicConstraints and used to validate holdout reconstruction candidates.",
+    "impact": "Holdout file sizes directly inform the constraint validation thresholds.",
+    "remediation": "Calculate file size statistics strictly on the 37 training files."
+  },
+  {
+    "id": "LR-06",
+    "risk_title": "Synthetically Homogeneous File Corpus Without Real-World Complexity",
+    "severity": "HIGH",
+    "affected_components": [
+      "extraction/dataset_generator.py (lines 42-248)"
+    ],
+    "mechanism": "All 50 corpus files are generated programmatically using simplistic generators (PIL geometric drawings, synthetic PDF lorem-ipsum strings, elementary XML zips, synthetic sine waves). No real-world files from standardized forensic datasets (Govdocs1, DFRWS, CFTT) are present.",
+    "impact": "Models learn synthetic statistical artifacts (e.g. identical sine wave frame patterns in MP3, identical PIL palette steps in PNG) rather than genuine file format complexities, leading to over-optimistic validation metrics that will not generalize to realistic forensic disk images.",
+    "remediation": "Integrate real forensic corpora (e.g., Govdocs1 1,000-file subsets) with diverse codecs, real photo JPEG compression tables, authentic office document structures, and heterogeneous storage media."
+  }
+]

@@ -1,0 +1,534 @@
+{
+  "metadata": {
+    "version": "2.0.0-phase3",
+    "seed": 42,
+    "timestamp": "2026-11-22T15:44:13Z",
+    "benchmark_runtime_seconds": 52.87,
+    "n_train_files": 28,
+    "n_val_files": 5,
+    "n_cal_files": 4,
+    "n_test_files": 13
+  },
+  "pair_level_benchmark": {
+    "independent_models": {
+      "same_file_task": {
+        "task": "same_file",
+        "roc_auc": 0.8711,
+        "pr_auc": 0.7838,
+        "precision_at_05": 0.0,
+        "recall_at_05": 0.0,
+        "f1_at_05": 0.0,
+        "brier_score": 0.1935,
+        "ece": 0.1879,
+        "precision@1": 0.7613,
+        "precision@5": 0.4837,
+        "recall@1": 0.4728,
+        "recall@5": 0.9191,
+        "n_pos": 1884,
+        "n_neg": 3768,
+        "optimal_threshold": 0.24,
+        "opt_precision": 0.561,
+        "opt_recall": 0.9055,
+        "opt_f1": 0.6928
+      },
+      "next_fragment_task": {
+        "task": "next_fragment",
+        "roc_auc": 0.8102,
+        "pr_auc": 0.4023,
+        "precision_at_05": 0.0,
+        "recall_at_05": 0.0,
+        "f1_at_05": 0.0,
+        "brier_score": 0.128,
+        "ece": 0.0894,
+        "precision@1": 0.517,
+        "precision@5": 0.2793,
+        "recall@1": 0.517,
+        "recall@5": 0.9342,
+        "n_pos": 942,
+        "n_neg": 4710,
+        "optimal_threshold": 0.14,
+        "opt_precision": 0.3286,
+        "opt_recall": 0.7176,
+        "opt_f1": 0.4508
+      },
+      "hard_negatives": {
+        "pos_same_non_adjacent": {
+          "count": 942,
+          "mean_p_same": 0.3042,
+          "mean_p_next": 0.1537,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        },
+        "neg_same_format": {
+          "count": 1884,
+          "mean_p_same": 0.2386,
+          "mean_p_next": 0.1063,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        },
+        "pos_adjacent": {
+          "count": 942,
+          "mean_p_same": 0.31,
+          "mean_p_next": 0.1628,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        },
+        "neg_cross_file_random": {
+          "count": 1757,
+          "mean_p_same": 0.1822,
+          "mean_p_next": 0.0677,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        },
+        "neg_similar_hist": {
+          "count": 127,
+          "mean_p_same": 0.2728,
+          "mean_p_next": 0.142,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        }
+      }
+    },
+    "multitask_model": {
+      "same_file_task": {
+        "task": "same_file",
+        "roc_auc": 0.8122,
+        "pr_auc": 0.6862,
+        "precision_at_05": 0.0,
+        "recall_at_05": 0.0,
+        "f1_at_05": 0.0,
+        "brier_score": 0.197,
+        "ece": 0.1346,
+        "precision@1": 0.7287,
+        "precision@5": 0.4774,
+        "recall@1": 0.4595,
+        "recall@5": 0.9028,
+        "n_pos": 1884,
+        "n_neg": 3768,
+        "optimal_threshold": 0.25,
+        "opt_precision": 0.483,
+        "opt_recall": 0.9411,
+        "opt_f1": 0.6383
+      },
+      "next_fragment_task": {
+        "task": "next_fragment",
+        "roc_auc": 0.7734,
+        "pr_auc": 0.347,
+        "precision_at_05": 0.0,
+        "recall_at_05": 0.0,
+        "f1_at_05": 0.0,
+        "brier_score": 0.126,
+        "ece": 0.0528,
+        "precision@1": 0.4682,
+        "precision@5": 0.2765,
+        "recall@1": 0.4682,
+        "recall@5": 0.9204,
+        "n_pos": 942,
+        "n_neg": 4710,
+        "optimal_threshold": 0.12,
+        "opt_precision": 0.2695,
+        "opt_recall": 0.9289,
+        "opt_f1": 0.4178
+      },
+      "hard_negatives": {
+        "pos_same_non_adjacent": {
+          "count": 942,
+          "mean_p_same": 0.3082,
+          "mean_p_next": 0.1756,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        },
+        "neg_same_format": {
+          "count": 1884,
+          "mean_p_same": 0.2676,
+          "mean_p_next": 0.1259,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        },
+        "pos_adjacent": {
+          "count": 942,
+          "mean_p_same": 0.3121,
+          "mean_p_next": 0.186,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        },
+        "neg_cross_file_random": {
+          "count": 1757,
+          "mean_p_same": 0.1738,
+          "mean_p_next": 0.0449,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        },
+        "neg_similar_hist": {
+          "count": 127,
+          "mean_p_same": 0.2865,
+          "mean_p_next": 0.1837,
+          "fpr_same": 0.0,
+          "fpr_next": 0.0
+        }
+      }
+    }
+  },
+  "reconstruction_benchmark": {
+    "Variant_A_Next_Only": {
+      "mode": "variant_a_next_only",
+      "metrics": {
+        "summary": {
+          "total_ground_truth_files": 13,
+          "total_reconstructed_files": 168,
+          "exact_reconstructed_files": 0,
+          "partial_reconstructed_files": 0,
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0
+        },
+        "fragment_level": {
+          "total_gt_fragments": 955,
+          "total_assigned_fragments": 955,
+          "fragment_placement_accuracy": 0.0168,
+          "successor_precision": 0.0127,
+          "successor_recall": 0.0106,
+          "successor_f1": 0.0116,
+          "duplicate_assignment_rate": 0.0,
+          "unused_fragment_rate": 0.0
+        },
+        "file_level": {
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0,
+          "false_file_merge_rate": 0.2857,
+          "false_file_split_rate": 1.0,
+          "false_reconstruction_rate": 0.0
+        },
+        "format_breakdown": {
+          "PDF": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "XLSX": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PNG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "DOCX": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP4": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "JPEG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP3": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "ZIP": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          }
+        },
+        "efficiency": {
+          "runtime_seconds": 0.3795,
+          "peak_memory_mb": 0.0,
+          "candidate_graph_nodes": 955,
+          "candidate_graph_edges": 7640,
+          "pairwise_evaluations_count": 0,
+          "search_time_seconds": 0.0
+        }
+      }
+    },
+    "Variant_B_Same_Only": {
+      "mode": "variant_b_same_only",
+      "metrics": {
+        "summary": {
+          "total_ground_truth_files": 13,
+          "total_reconstructed_files": 29,
+          "exact_reconstructed_files": 0,
+          "partial_reconstructed_files": 1,
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0769,
+          "byte_recovery_ratio": 0.2031
+        },
+        "fragment_level": {
+          "total_gt_fragments": 955,
+          "total_assigned_fragments": 955,
+          "fragment_placement_accuracy": 0.3079,
+          "successor_precision": 0.9795,
+          "successor_recall": 0.9628,
+          "successor_f1": 0.9711,
+          "duplicate_assignment_rate": 0.0,
+          "unused_fragment_rate": 0.0
+        },
+        "file_level": {
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0769,
+          "byte_recovery_ratio": 0.2031,
+          "false_file_merge_rate": 0.1379,
+          "false_file_split_rate": 0.9231,
+          "false_reconstruction_rate": 0.0
+        },
+        "format_breakdown": {
+          "PDF": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "XLSX": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PNG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "DOCX": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP4": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "JPEG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP3": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 1,
+            "exact_recovery_rate": 0.0
+          },
+          "ZIP": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          }
+        },
+        "efficiency": {
+          "runtime_seconds": 0.132,
+          "peak_memory_mb": 0.0,
+          "candidate_graph_nodes": 955,
+          "candidate_graph_edges": 10430,
+          "pairwise_evaluations_count": 0,
+          "search_time_seconds": 0.0
+        }
+      }
+    },
+    "Variant_C_Dual_Independent": {
+      "mode": "variant_c_dual_independent",
+      "metrics": {
+        "summary": {
+          "total_ground_truth_files": 13,
+          "total_reconstructed_files": 164,
+          "exact_reconstructed_files": 0,
+          "partial_reconstructed_files": 0,
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0
+        },
+        "fragment_level": {
+          "total_gt_fragments": 955,
+          "total_assigned_fragments": 955,
+          "fragment_placement_accuracy": 0.0136,
+          "successor_precision": 0.0114,
+          "successor_recall": 0.0096,
+          "successor_f1": 0.0104,
+          "duplicate_assignment_rate": 0.0,
+          "unused_fragment_rate": 0.0
+        },
+        "file_level": {
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0,
+          "false_file_merge_rate": 0.25,
+          "false_file_split_rate": 1.0,
+          "false_reconstruction_rate": 0.0
+        },
+        "format_breakdown": {
+          "PDF": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "XLSX": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PNG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "DOCX": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP4": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "JPEG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP3": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "ZIP": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          }
+        },
+        "efficiency": {
+          "runtime_seconds": 0.489,
+          "peak_memory_mb": 0.0,
+          "candidate_graph_nodes": 955,
+          "candidate_graph_edges": 10430,
+          "pairwise_evaluations_count": 0,
+          "search_time_seconds": 0.0
+        }
+      }
+    },
+    "Variant_D_Shared_MultiTask": {
+      "mode": "variant_c_dual_independent",
+      "metrics": {
+        "summary": {
+          "total_ground_truth_files": 13,
+          "total_reconstructed_files": 125,
+          "exact_reconstructed_files": 0,
+          "partial_reconstructed_files": 0,
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0
+        },
+        "fragment_level": {
+          "total_gt_fragments": 955,
+          "total_assigned_fragments": 955,
+          "fragment_placement_accuracy": 0.0094,
+          "successor_precision": 0.0133,
+          "successor_recall": 0.0117,
+          "successor_f1": 0.0124,
+          "duplicate_assignment_rate": 0.0,
+          "unused_fragment_rate": 0.0
+        },
+        "file_level": {
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0,
+          "false_file_merge_rate": 0.24,
+          "false_file_split_rate": 1.0,
+          "false_reconstruction_rate": 0.0
+        },
+        "format_breakdown": {
+          "PDF": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "XLSX": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PNG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "DOCX": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP4": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "JPEG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP3": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "ZIP": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          }
+        },
+        "efficiency": {
+          "runtime_seconds": 0.2762,
+          "peak_memory_mb": 0.0,
+          "candidate_graph_nodes": 955,
+          "candidate_graph_edges": 9669,
+          "pairwise_evaluations_count": 0,
+          "search_time_seconds": 0.0
+        }
+      }
+    }
+  }
+}

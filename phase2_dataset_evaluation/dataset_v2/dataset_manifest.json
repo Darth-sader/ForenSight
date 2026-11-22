@@ -1,0 +1,524 @@
+{
+  "dataset_version": "2.0.0-phase2",
+  "generation_seed": 42,
+  "created_timestamp": "2026-11-22T15:22:25Z",
+  "total_files": 72,
+  "total_fragments": 1464,
+  "block_size": 512,
+  "formats": {
+    "JPEG": 10,
+    "PNG": 10,
+    "PDF": 10,
+    "ZIP": 10,
+    "DOCX": 8,
+    "XLSX": 8,
+    "MP3": 8,
+    "MP4": 8
+  },
+  "files": {
+    "docx_01_spec.docx": {
+      "source_file_id": "docx_01_spec.docx",
+      "file_type": "DOCX",
+      "file_size_bytes": 37036,
+      "total_fragments": 73,
+      "sha256": "4eebe1ae7e079da21fd83b1af46e372ac30eb8b9a4b728b40f26c85022b01c41"
+    },
+    "docx_02_spec.docx": {
+      "source_file_id": "docx_02_spec.docx",
+      "file_type": "DOCX",
+      "file_size_bytes": 37036,
+      "total_fragments": 73,
+      "sha256": "a54a08243fcf274d310e75b678e036bd89139a163a22aabc3681f982adb0a7a4"
+    },
+    "docx_03_spec.docx": {
+      "source_file_id": "docx_03_spec.docx",
+      "file_type": "DOCX",
+      "file_size_bytes": 37035,
+      "total_fragments": 73,
+      "sha256": "18bdf1a6a0db5bf5e46111a8a8a577d9bc766a074dd535d7e01a27e6e7bcc431"
+    },
+    "docx_04_spec.docx": {
+      "source_file_id": "docx_04_spec.docx",
+      "file_type": "DOCX",
+      "file_size_bytes": 37037,
+      "total_fragments": 73,
+      "sha256": "007b443fb92022b46593c92b5a05d28cac366aaf36cfdebed3f878070ca706df"
+    },
+    "docx_05_spec.docx": {
+      "source_file_id": "docx_05_spec.docx",
+      "file_type": "DOCX",
+      "file_size_bytes": 37035,
+      "total_fragments": 73,
+      "sha256": "96b3e0399df2b5c8a0a36dc902fbc2ee4e0ea31e06fde367ad065f0a62d8c8fb"
+    },
+    "docx_06_spec.docx": {
+      "source_file_id": "docx_06_spec.docx",
+      "file_type": "DOCX",
+      "file_size_bytes": 37036,
+      "total_fragments": 73,
+      "sha256": "bcf30381c85bc8276762e91e509ca019ccb29d71a85ffac393d673f398dca614"
+    },
+    "docx_07_spec.docx": {
+      "source_file_id": "docx_07_spec.docx",
+      "file_type": "DOCX",
+      "file_size_bytes": 37035,
+      "total_fragments": 73,
+      "sha256": "ee1645069ef34a0389dae99248de9c2143d363cdd491c4fba7ff72d73c043251"
+    },
+    "docx_08_spec.docx": {
+      "source_file_id": "docx_08_spec.docx",
+      "file_type": "DOCX",
+      "file_size_bytes": 37034,
+      "total_fragments": 73,
+      "sha256": "cdc843e27e222652cc7f1d51e14c6a3c4af248048dac33a2fbbeff3ccf7a60ae"
+    },
+    "jpeg_01_rgb_base_q85.jpg": {
+      "source_file_id": "jpeg_01_rgb_base_q85.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 2358,
+      "total_fragments": 5,
+      "sha256": "2a9cbbe246f3ffcf00ee11b2fade8c20747d70b92de2b0467a49a76bc6cb4920"
+    },
+    "jpeg_02_rgb_base_q50.jpg": {
+      "source_file_id": "jpeg_02_rgb_base_q50.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 2381,
+      "total_fragments": 5,
+      "sha256": "e28238fcfb9b7babf5368b1d6b96b2a2dbeac2414822116af280492128a12b91"
+    },
+    "jpeg_03_rgb_prog_q90.jpg": {
+      "source_file_id": "jpeg_03_rgb_prog_q90.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 2248,
+      "total_fragments": 5,
+      "sha256": "9f97ee7ef97329c30e57923225b3c13cd400aa8711b2ce6b948eee32d187e074"
+    },
+    "jpeg_04_rgb_prog_q65.jpg": {
+      "source_file_id": "jpeg_04_rgb_prog_q65.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 3456,
+      "total_fragments": 7,
+      "sha256": "d70392064b78d8f19ed00e2c9dbc51fa0fb6e3dcedfd79e489fa2c267cb1e216"
+    },
+    "jpeg_05_gray_base_q80.jpg": {
+      "source_file_id": "jpeg_05_gray_base_q80.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 2387,
+      "total_fragments": 5,
+      "sha256": "e8b69bcc645a1466e9b65cb0ac4ab135ff69a67ebcc545ea4a5a76f5341e795e"
+    },
+    "jpeg_06_gray_prog_q70.jpg": {
+      "source_file_id": "jpeg_06_gray_prog_q70.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 1992,
+      "total_fragments": 4,
+      "sha256": "f6cc7b22da2d19223ee9de2aaf86e8628494344bdda81cc81cf1d175b36bd972"
+    },
+    "jpeg_07_exif_com_q95.jpg": {
+      "source_file_id": "jpeg_07_exif_com_q95.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 8148,
+      "total_fragments": 16,
+      "sha256": "b4ee46a5d0b0ccaa550885802ec0f862d549460f0cd14900b86f9af899f40d07"
+    },
+    "jpeg_08_subsample420.jpg": {
+      "source_file_id": "jpeg_08_subsample420.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 3348,
+      "total_fragments": 7,
+      "sha256": "cf6fa6b7d2b5b2c430aa510dd46c753df795500f9238d82da84da6f0ddbc9d9a"
+    },
+    "jpeg_09_small_icon_q85.jpg": {
+      "source_file_id": "jpeg_09_small_icon_q85.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 1528,
+      "total_fragments": 3,
+      "sha256": "14745a3d15a3f6277cf7cd68df5d823563fbbfef7f5768965d63309b43772ca3"
+    },
+    "jpeg_10_landscape_q60.jpg": {
+      "source_file_id": "jpeg_10_landscape_q60.jpg",
+      "file_type": "JPG",
+      "file_size_bytes": 3203,
+      "total_fragments": 7,
+      "sha256": "9a2582d139f126f3a4903f8ace4a2c3a07bdbb9327c99a1171a6ed595ac5ffe2"
+    },
+    "mp3_01_64kbps.mp3": {
+      "source_file_id": "mp3_01_64kbps.mp3",
+      "file_type": "MP3",
+      "file_size_bytes": 5456,
+      "total_fragments": 11,
+      "sha256": "179d8b4b8b17a8c86494658340706d760c284f1030babeff8d5f4ddc962f4ccb"
+    },
+    "mp3_02_128kbps.mp3": {
+      "source_file_id": "mp3_02_128kbps.mp3",
+      "file_type": "MP3",
+      "file_size_bytes": 12638,
+      "total_fragments": 25,
+      "sha256": "bca3425517ab116a3b20791a7b4e0ebf7aa2b5389db9e1924620410ce2cf7aac"
+    },
+    "mp3_03_192kbps.mp3": {
+      "source_file_id": "mp3_03_192kbps.mp3",
+      "file_type": "MP3",
+      "file_size_bytes": 22166,
+      "total_fragments": 44,
+      "sha256": "a1452ebe0f7c2be51bfce057cbcb926fe2e12c67c530405e16d7d74357f133b8"
+    },
+    "mp3_04_256kbps.mp3": {
+      "source_file_id": "mp3_04_256kbps.mp3",
+      "file_type": "MP3",
+      "file_size_bytes": 33528,
+      "total_fragments": 66,
+      "sha256": "14f4b02a1b0a5d6c5097606358ce0e05fbe67e0a9c8dab8075deb1d3d6ff3cab"
+    },
+    "mp3_05_320kbps.mp3": {
+      "source_file_id": "mp3_05_320kbps.mp3",
+      "file_type": "MP3",
+      "file_size_bytes": 47236,
+      "total_fragments": 93,
+      "sha256": "c7eb971073335082e623c778a542636f7135c8aad6498af324cf38cc4f54bfc7"
+    },
+    "mp3_06_128kbps.mp3": {
+      "source_file_id": "mp3_06_128kbps.mp3",
+      "file_type": "MP3",
+      "file_size_bytes": 20978,
+      "total_fragments": 41,
+      "sha256": "85d3349ed0c482a333a4ecce28166094668e8e1c0ec94adb959e8a571875a814"
+    },
+    "mp3_07_192kbps.mp3": {
+      "source_file_id": "mp3_07_192kbps.mp3",
+      "file_type": "MP3",
+      "file_size_bytes": 34686,
+      "total_fragments": 68,
+      "sha256": "87174c39858e71986232a60f0b2012e39c74b6a34c595febf6b2e7f9d63d0c7d"
+    },
+    "mp3_08_320kbps.mp3": {
+      "source_file_id": "mp3_08_320kbps.mp3",
+      "file_type": "MP3",
+      "file_size_bytes": 62768,
+      "total_fragments": 123,
+      "sha256": "dc5e27837c2d156a40511375c97d93f4636472e594318c7650b3ac5617d09574"
+    },
+    "mp4_01_video.mp4": {
+      "source_file_id": "mp4_01_video.mp4",
+      "file_type": "MP4",
+      "file_size_bytes": 3348,
+      "total_fragments": 7,
+      "sha256": "cf5f4c9d2be572e28d71d945fb58c44302c429e36fed902bcd199598cf007a1c"
+    },
+    "mp4_02_video.mp4": {
+      "source_file_id": "mp4_02_video.mp4",
+      "file_type": "MP4",
+      "file_size_bytes": 4372,
+      "total_fragments": 9,
+      "sha256": "637ac14db245c220fceed80cbc981f288c0227e088002fa721fda11525a91772"
+    },
+    "mp4_03_video.mp4": {
+      "source_file_id": "mp4_03_video.mp4",
+      "file_type": "MP4",
+      "file_size_bytes": 5396,
+      "total_fragments": 11,
+      "sha256": "c47838ce8bf598460ab298d03acbd8ac40f8b2b05cdc8e06d7439139c39c0e3f"
+    },
+    "mp4_04_video.mp4": {
+      "source_file_id": "mp4_04_video.mp4",
+      "file_type": "MP4",
+      "file_size_bytes": 6420,
+      "total_fragments": 13,
+      "sha256": "48d98b6d55a317344cdb78a5193a49d1bedc00ab99975a6a19cba6783a1be8af"
+    },
+    "mp4_05_video.mp4": {
+      "source_file_id": "mp4_05_video.mp4",
+      "file_type": "MP4",
+      "file_size_bytes": 7444,
+      "total_fragments": 15,
+      "sha256": "f00120794ea1d6203783573c518b666f9508ba33d89898b652daf6a38068095d"
+    },
+    "mp4_06_video.mp4": {
+      "source_file_id": "mp4_06_video.mp4",
+      "file_type": "MP4",
+      "file_size_bytes": 8468,
+      "total_fragments": 17,
+      "sha256": "1534aff9f85223cda646df653be724efbd70bdb78f67b2aaa521024ddfef78cf"
+    },
+    "mp4_07_video.mp4": {
+      "source_file_id": "mp4_07_video.mp4",
+      "file_type": "MP4",
+      "file_size_bytes": 9492,
+      "total_fragments": 19,
+      "sha256": "249b328bbc0f064f45f70d0a221fd87b2560d0cdb73fd4811858cef34ae7a03b"
+    },
+    "mp4_08_video.mp4": {
+      "source_file_id": "mp4_08_video.mp4",
+      "file_type": "MP4",
+      "file_size_bytes": 10516,
+      "total_fragments": 21,
+      "sha256": "e9a1a8079bb6ce23e9a84fc832099e251bc6a90d5aaed7a26e8272b8773ed0b2"
+    },
+    "pdf_01_report.pdf": {
+      "source_file_id": "pdf_01_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 1636,
+      "total_fragments": 4,
+      "sha256": "eccaf4e1c98af0338ecf638de3e5bf5915dc9d215974c6b9dc9eb8798f1b77f1"
+    },
+    "pdf_02_report.pdf": {
+      "source_file_id": "pdf_02_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 2089,
+      "total_fragments": 5,
+      "sha256": "c81e34755883a00904598e77c9cb792dad3760d9d73f881928cad433d21dde48"
+    },
+    "pdf_03_report.pdf": {
+      "source_file_id": "pdf_03_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 2086,
+      "total_fragments": 5,
+      "sha256": "ae706b9221ae6932e82680a995d87ef4498822966ffbd9b68d42858efd3b20e1"
+    },
+    "pdf_04_report.pdf": {
+      "source_file_id": "pdf_04_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 2084,
+      "total_fragments": 5,
+      "sha256": "c8caf6e8bd4b6a950fd4cf75aff73a463b3351851d09621f1a378424f22b1c1c"
+    },
+    "pdf_05_report.pdf": {
+      "source_file_id": "pdf_05_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 2196,
+      "total_fragments": 5,
+      "sha256": "a6eb8c4f4f0100907d68043012c317d6693913b4125df32f4ef926ab2ee527ef"
+    },
+    "pdf_06_report.pdf": {
+      "source_file_id": "pdf_06_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 2089,
+      "total_fragments": 5,
+      "sha256": "99441b7f815aeb5ef12dc3f37a20dd75a1c0d6bccd2f94208120df79a479540b"
+    },
+    "pdf_07_report.pdf": {
+      "source_file_id": "pdf_07_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 2092,
+      "total_fragments": 5,
+      "sha256": "0f2a15d9679797780f535564b6f4a8282913bae05a5e1b4389c18d6edc23a4f7"
+    },
+    "pdf_08_report.pdf": {
+      "source_file_id": "pdf_08_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 2086,
+      "total_fragments": 5,
+      "sha256": "61ca1da02e9317bf49ff7af23bbe988e9e628380e8dd10288df031b95de4f073"
+    },
+    "pdf_09_report.pdf": {
+      "source_file_id": "pdf_09_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 1632,
+      "total_fragments": 4,
+      "sha256": "e12bbec7949246ce4c575395b825798f65e9fcc277a38e26dbff6bbe111daf54"
+    },
+    "pdf_10_report.pdf": {
+      "source_file_id": "pdf_10_report.pdf",
+      "file_type": "PDF",
+      "file_size_bytes": 2093,
+      "total_fragments": 5,
+      "sha256": "9f0e1d862741071386f5d35771342efeccaa4b1c104a1488466cdef0ab0a64ab"
+    },
+    "png_01_rgb_truecolor.png": {
+      "source_file_id": "png_01_rgb_truecolor.png",
+      "file_type": "PNG",
+      "file_size_bytes": 2361,
+      "total_fragments": 5,
+      "sha256": "974985671be356e725f024d00140dd406ccde33ea96b1b6db5cce249d331d63a"
+    },
+    "png_02_rgba_alpha.png": {
+      "source_file_id": "png_02_rgba_alpha.png",
+      "file_type": "PNG",
+      "file_size_bytes": 2639,
+      "total_fragments": 6,
+      "sha256": "d9c661f913712871139f2f3ba9d6beab6e8f500821cc3ffe7bc00c0cf7b87cf0"
+    },
+    "png_03_grayscale.png": {
+      "source_file_id": "png_03_grayscale.png",
+      "file_type": "PNG",
+      "file_size_bytes": 2150,
+      "total_fragments": 5,
+      "sha256": "f799a27e9d6d6f869197cb3266b83963878546510c84ce114766de8873c16ca4"
+    },
+    "png_04_palette_256.png": {
+      "source_file_id": "png_04_palette_256.png",
+      "file_type": "PNG",
+      "file_size_bytes": 1127,
+      "total_fragments": 3,
+      "sha256": "e487140e2cbd0193215f9d169042fe52e5dd2370dd0e6a95ec585a1df353f8f2"
+    },
+    "png_05_text_chunks.png": {
+      "source_file_id": "png_05_text_chunks.png",
+      "file_type": "PNG",
+      "file_size_bytes": 2294,
+      "total_fragments": 5,
+      "sha256": "97b9beefdc1126bcc818c96dc2c0d4d75392108659be47fc692526e786bca114"
+    },
+    "png_06_phys_gama.png": {
+      "source_file_id": "png_06_phys_gama.png",
+      "file_type": "PNG",
+      "file_size_bytes": 2479,
+      "total_fragments": 5,
+      "sha256": "2de825efc3054463a551fee78b9a63a21efc2e8f3e7a6861f3e82caec3e88919"
+    },
+    "png_07_rgba_small.png": {
+      "source_file_id": "png_07_rgba_small.png",
+      "file_type": "PNG",
+      "file_size_bytes": 989,
+      "total_fragments": 2,
+      "sha256": "7e5e443bbe7cc8fcb7f1d88ea2f8ea8b1aa4fcec98e34cbbcb2410ef2d24d97f"
+    },
+    "png_08_gray_grid.png": {
+      "source_file_id": "png_08_gray_grid.png",
+      "file_type": "PNG",
+      "file_size_bytes": 1879,
+      "total_fragments": 4,
+      "sha256": "52befde0d6135b785521843c057d58989ea35d9e7a1385320611387efcc64268"
+    },
+    "png_09_high_compress.png": {
+      "source_file_id": "png_09_high_compress.png",
+      "file_type": "PNG",
+      "file_size_bytes": 1813,
+      "total_fragments": 4,
+      "sha256": "be72ec85a166ac1ffb6e2d594a94d0df272011e2b4f1e83063d1d483a8b877f1"
+    },
+    "png_10_interlaced.png": {
+      "source_file_id": "png_10_interlaced.png",
+      "file_type": "PNG",
+      "file_size_bytes": 2335,
+      "total_fragments": 5,
+      "sha256": "a81ebb5d6e39665edc7bf8c98b049ba620217609d8d0c678c48480d4eedae782"
+    },
+    "xlsx_01_sheet.xlsx": {
+      "source_file_id": "xlsx_01_sheet.xlsx",
+      "file_type": "XLSX",
+      "file_size_bytes": 5187,
+      "total_fragments": 11,
+      "sha256": "b69a14ea146901ff0cf5413d3a3dcb6ef6f6657d3cc563a77b515f3455e610b0"
+    },
+    "xlsx_02_sheet.xlsx": {
+      "source_file_id": "xlsx_02_sheet.xlsx",
+      "file_type": "XLSX",
+      "file_size_bytes": 5187,
+      "total_fragments": 11,
+      "sha256": "b69a14ea146901ff0cf5413d3a3dcb6ef6f6657d3cc563a77b515f3455e610b0"
+    },
+    "xlsx_03_sheet.xlsx": {
+      "source_file_id": "xlsx_03_sheet.xlsx",
+      "file_type": "XLSX",
+      "file_size_bytes": 5187,
+      "total_fragments": 11,
+      "sha256": "b69a14ea146901ff0cf5413d3a3dcb6ef6f6657d3cc563a77b515f3455e610b0"
+    },
+    "xlsx_04_sheet.xlsx": {
+      "source_file_id": "xlsx_04_sheet.xlsx",
+      "file_type": "XLSX",
+      "file_size_bytes": 5750,
+      "total_fragments": 12,
+      "sha256": "ef84c13d194d4e54e65d986ccfed316d4bf3d266111bc72872ca029cb122d4c3"
+    },
+    "xlsx_05_sheet.xlsx": {
+      "source_file_id": "xlsx_05_sheet.xlsx",
+      "file_type": "XLSX",
+      "file_size_bytes": 5750,
+      "total_fragments": 12,
+      "sha256": "ef84c13d194d4e54e65d986ccfed316d4bf3d266111bc72872ca029cb122d4c3"
+    },
+    "xlsx_06_sheet.xlsx": {
+      "source_file_id": "xlsx_06_sheet.xlsx",
+      "file_type": "XLSX",
+      "file_size_bytes": 5750,
+      "total_fragments": 12,
+      "sha256": "ef84c13d194d4e54e65d986ccfed316d4bf3d266111bc72872ca029cb122d4c3"
+    },
+    "xlsx_07_sheet.xlsx": {
+      "source_file_id": "xlsx_07_sheet.xlsx",
+      "file_type": "XLSX",
+      "file_size_bytes": 5750,
+      "total_fragments": 12,
+      "sha256": "ef84c13d194d4e54e65d986ccfed316d4bf3d266111bc72872ca029cb122d4c3"
+    },
+    "xlsx_08_sheet.xlsx": {
+      "source_file_id": "xlsx_08_sheet.xlsx",
+      "file_type": "XLSX",
+      "file_size_bytes": 5750,
+      "total_fragments": 12,
+      "sha256": "ef84c13d194d4e54e65d986ccfed316d4bf3d266111bc72872ca029cb122d4c3"
+    },
+    "zip_01_archive.zip": {
+      "source_file_id": "zip_01_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 740,
+      "total_fragments": 2,
+      "sha256": "c1276b9d07df834e7ad64f3d89ae902cf9261ef130acafc58476d8ed9189aed5"
+    },
+    "zip_02_archive.zip": {
+      "source_file_id": "zip_02_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 1486,
+      "total_fragments": 3,
+      "sha256": "4659b66eb3fa5a3e130f8b93897ff45e0edbbb0abf8a19ebdc496894fc4b5044"
+    },
+    "zip_03_archive.zip": {
+      "source_file_id": "zip_03_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 748,
+      "total_fragments": 2,
+      "sha256": "4d03aee7341ab40c29fbfbfcab607377c22793b0befc21c92aec9180c863f01d"
+    },
+    "zip_04_archive.zip": {
+      "source_file_id": "zip_04_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 2510,
+      "total_fragments": 5,
+      "sha256": "c6c8a9ff78ce5c8ed545a6de0cbfff1db0f4cc9f215f17f15e79b89628446b33"
+    },
+    "zip_05_archive.zip": {
+      "source_file_id": "zip_05_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 927,
+      "total_fragments": 2,
+      "sha256": "fa211f4fe89f51549baf41ebf2be6bc1e3f197df3ecb78942ec6ab2191304313"
+    },
+    "zip_06_archive.zip": {
+      "source_file_id": "zip_06_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 3703,
+      "total_fragments": 8,
+      "sha256": "6223636b9ae577482649503eed5f0b4e86ee3b860c8b2c00491cb112c8e5e22e"
+    },
+    "zip_07_archive.zip": {
+      "source_file_id": "zip_07_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 936,
+      "total_fragments": 2,
+      "sha256": "0d8cdce505f4ec98176406aac7b6b4d049f73e79f57925ecfe0c70532a771530"
+    },
+    "zip_08_archive.zip": {
+      "source_file_id": "zip_08_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 4727,
+      "total_fragments": 10,
+      "sha256": "32fb51e2ec6aa7369fe4f9efd1c5cb72cab110afffd8c1b68a2c12a796c4f55b"
+    },
+    "zip_09_archive.zip": {
+      "source_file_id": "zip_09_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 946,
+      "total_fragments": 2,
+      "sha256": "018b84ffd5d4976e25ce69b87c44cb160f045451c639c37813dfeef69fa890fa"
+    },
+    "zip_10_archive.zip": {
+      "source_file_id": "zip_10_archive.zip",
+      "file_type": "ZIP",
+      "file_size_bytes": 5759,
+      "total_fragments": 12,
+      "sha256": "d74cf0821f3b8ceafca86c242787b43a23f11b8f872b39c91999dbfbd2e55032"
+    }
+  }
+}

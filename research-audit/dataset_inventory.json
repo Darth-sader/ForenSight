@@ -1,0 +1,83 @@
+{
+  "corpus_scope": "Controlled synthetic corpus (no external/Govdocs/DFRWS forensic files)",
+  "total_files": 50,
+  "total_bytes": 1798448,
+  "total_fragments": 3538,
+  "block_granularity_bytes": 512,
+  "train_files": 37,
+  "holdout_files": 13,
+  "formats": {
+    "JPEG": {
+      "file_count": 10,
+      "total_bytes": 150109,
+      "fragment_count": 299,
+      "train_count": 8,
+      "holdout_count": 2
+    },
+    "PNG": {
+      "file_count": 8,
+      "total_bytes": 225081,
+      "fragment_count": 444,
+      "train_count": 6,
+      "holdout_count": 2
+    },
+    "PDF": {
+      "file_count": 8,
+      "total_bytes": 415969,
+      "fragment_count": 817,
+      "train_count": 6,
+      "holdout_count": 2
+    },
+    "ZIP": {
+      "file_count": 6,
+      "total_bytes": 62860,
+      "fragment_count": 126,
+      "train_count": 4,
+      "holdout_count": 2
+    },
+    "DOCX": {
+      "file_count": 6,
+      "total_bytes": 21144,
+      "fragment_count": 43,
+      "train_count": 4,
+      "holdout_count": 2
+    },
+    "XLSX": {
+      "file_count": 4,
+      "total_bytes": 26110,
+      "fragment_count": 53,
+      "train_count": 3,
+      "holdout_count": 1
+    },
+    "MP3": {
+      "file_count": 4,
+      "total_bytes": 399371,
+      "fragment_count": 782,
+      "train_count": 3,
+      "holdout_count": 1
+    },
+    "MP4": {
+      "file_count": 4,
+      "total_bytes": 497804,
+      "fragment_count": 974,
+      "train_count": 3,
+      "holdout_count": 1
+    }
+  },
+  "fragment_size_distribution": {
+    "full_512_byte_blocks": 3490,
+    "partial_tail_blocks": 48,
+    "min_tail_size_bytes": 3,
+    "max_tail_size_bytes": 490
+  },
+  "synthesis_methods": {
+    "JPEG": "PIL ImageDraw RGB with gradient backgrounds and random colored ellipses",
+    "PNG": "PIL ImageDraw RGB with vertical line gradients",
+    "PDF": "Synthetic PDF 1.4 string generation with basic obj, stream, xref, and trailer containing random word chunks",
+    "ZIP": "Python zipfile.ZipFile deflated containing random CSV rows and random notes text",
+    "DOCX": "Python zipfile.ZipFile containing [Content_Types].xml, _rels/.rels, and word/document.xml with synthetic paragraphs",
+    "XLSX": "Python zipfile.ZipFile containing [Content_Types].xml, _rels/.rels, xl/workbook.xml, and sheet1.xml with float cell values",
+    "MP3": "Synthetic ID3v2 header tag plus synthetic sine wave audio (sin tones) packed into 417-byte MPEG-1 Layer III frames",
+    "MP4": "Synthesized ISO base media file format with ftyp box, mdat box containing random NALU bytes (0x00000001419a), and basic moov/mvhd/trak"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "supervised_models": {
+    "random_forest": {
+      "family": "ensemble_trees",
+      "implementation": "sklearn.ensemble.RandomForestClassifier",
+      "file": "models/random_forest.py",
+      "hyperparameters": {
+        "n_estimators": 200,
+        "max_depth": 24,
+        "min_samples_split": 4,
+        "class_weight": "balanced_subsample",
+        "random_state": 42
+      },
+      "tasks": [
+        "same_file",
+        "next_fragment"
+      ],
+      "input_dim": 362,
+      "output_dim": 1
+    },
+    "xgboost": {
+      "family": "gradient_boosted_trees",
+      "implementation": "xgboost.XGBClassifier",
+      "file": "models/xgboost.py",
+      "hyperparameters": {
+        "n_estimators": 300,
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "eval_metric": "logloss",
+        "tree_method": "hist",
+        "random_state": 42
+      },
+      "tasks": [
+        "same_file",
+        "next_fragment"
+      ],
+      "input_dim": 362,
+      "output_dim": 1
+    },
+    "mlp_torch": {
+      "family": "feedforward_neural_network",
+      "implementation": "PyTorch PairMLP",
+      "file": "models/mlp.py",
+      "architecture": "Linear(362, 128) -> ReLU -> Dropout(0.2) -> Linear(128, 128) -> ReLU -> Dropout(0.2) -> Linear(128, 1)",
+      "hyperparameters": {
+        "hidden": 128,
+        "layers": 2,
+        "dropout": 0.2,
+        "lr": 0.001,
+        "batch_size": 512,
+        "epochs": 60,
+        "patience": 6,
+        "optimizer": "Adam",
+        "loss": "BCEWithLogitsLoss"
+      },
+      "tasks": [
+        "same_file",
+        "next_fragment"
+      ],
+      "input_dim": 362,
+      "output_dim": 1
+    },
+    "logistic_regression": {
+      "family": "linear_model",
+      "implementation": "sklearn.pipeline.Pipeline([StandardScaler, LogisticRegression])",
+      "file": "models/logistic.py",
+      "hyperparameters": {
+        "C": 1.0,
+        "max_iter": 2000,
+        "class_weight": "balanced",
+        "solver": "lbfgs",
+        "random_state": 42
+      },
+      "tasks": [
+        "same_file",
+        "next_fragment"
+      ],
+      "input_dim": 362,
+      "output_dim": 1
+    }
+  },
+  "ensemble_combination": {
+    "class": "TransitionEnsemble",
+    "file": "models/__init__.py",
+    "combination_logic": "Normalized ROC-AUC margin over 0.5: weight_m = max(0, val_auc - 0.5) / sum(max(0, val_auc - 0.5)). Prediction: sum(weight_m * P_m(x))"
+  },
+  "deep_metric_learning": {
+    "siamese_mlp": {
+      "class": "SiameseNetwork / FragmentEncoder",
+      "file": "models/siamese.py",
+      "input_dim": 400,
+      "latent_dim": 32,
+      "architecture": "Linear(400, 192) -> LayerNorm -> ReLU -> Dropout(0.15) -> Linear(192, 192) -> LayerNorm -> ReLU -> Dropout(0.15) -> Linear(192, 32) -> L2_normalize",
+      "loss_function": "Contrastive Loss (margin=1.0) on pairs + Triplet Loss (weight=0.5, margin=1.0) on consecutive triples with random negatives",
+      "optimizer": "Adam(lr=0.001) with CosineAnnealingLR(T_max=40)",
+      "batch_size": 512,
+      "epochs": 40,
+      "patience": 5
+    },
+    "siamese_1d_cnn": {
+      "class": "SiameseCNN / RawByteCNN",
+      "file": "models/cnn_encoder.py",
+      "input_dim": 512,
+      "latent_dim": 32,
+      "architecture": "Conv1d(1, 32, k=8, s=4, p=2) -> BatchNorm -> ReLU -> Conv1d(32, 64, k=6, s=3, p=1) -> BatchNorm -> ReLU -> Conv1d(64, 96, k=4, s=2, p=1) -> BatchNorm -> ReLU -> AdaptiveAvgPool1d(4) -> Flatten -> Linear(384, 128) -> ReLU -> Dropout(0.15) -> Linear(128, 32) -> L2_normalize",
+      "loss_function": "Contrastive Loss (margin=1.0) on pairs + Triplet Loss (weight=0.5, margin=1.0) with random negatives",
+      "optimizer": "Adam(lr=0.001)",
+      "batch_size": 256,
+      "epochs": 25,
+      "patience": 4
+    }
+  },
+  "calibration_models": {
+    "platt_calibrator": "sklearn.linear_model.LogisticRegression(C=1e6, max_iter=1000)",
+    "isotonic_calibrator": "sklearn.isotonic.IsotonicRegression(out_of_bounds='clip', y_min=0.0, y_max=1.0)",
+    "selection_rule": "Lowest Brier score on validation set"
+  },
+  "unsupervised_models": {
+    "isolation_forest": "sklearn.ensemble.IsolationForest(contamination=0.05, random_state=42)",
+    "local_outlier_factor": "sklearn.neighbors.LocalOutlierFactor(n_neighbors=20, contamination=0.05, novelty=True)",
+    "kmeans": "sklearn.cluster.KMeans(n_clusters=k_best selected by silhouette score in range [4, 14], n_init=10, random_state=42)"
+  },
+  "meta_ranker": {
+    "class": "CandidateRanker",
+    "file": "ranking/candidate_ranker.py",
+    "model": "sklearn.linear_model.LogisticRegression(max_iter=2000, class_weight='balanced')",
+    "features": [
+      "transition",
+      "embedding",
+      "structural",
+      "context",
+      "anomaly",
+      "gap_ratio",
+      "violations",
+      "length",
+      "seed_rank",
+      "min_edge"
+    ]
+  }
+}
