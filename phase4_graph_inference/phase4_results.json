@@ -1,0 +1,749 @@
+{
+  "metadata": {
+    "version": "2.0.0-phase4",
+    "seed": 42,
+    "timestamp": "2026-11-23T14:49:47Z",
+    "runtime_seconds": 86.09,
+    "n_test_fragments": 955,
+    "n_test_files": 13
+  },
+  "candidate_generation_benchmark": {
+    "fixed_k_4": {
+      "k": 4,
+      "total_fragments": 955,
+      "total_edges": 3820,
+      "graph_density": 0.004193,
+      "avg_in_degree": 4.0,
+      "avg_out_degree": 4.0,
+      "isolated_nodes": 0,
+      "recall_at_k": {
+        "recall@1": 0.0074,
+        "recall@3": 0.0191,
+        "recall@5": 0.0297,
+        "recall@4": 0.0234
+      },
+      "precision_at_k": {
+        "precision@1": 0.0074,
+        "precision@3": 0.0064,
+        "precision@5": 0.0059,
+        "precision@4": 0.0058
+      },
+      "runtime_seconds": 0.7484
+    },
+    "fixed_k_8": {
+      "k": 8,
+      "total_fragments": 955,
+      "total_edges": 7640,
+      "graph_density": 0.008386,
+      "avg_in_degree": 8.0,
+      "avg_out_degree": 8.0,
+      "isolated_nodes": 0,
+      "recall_at_k": {
+        "recall@1": 0.0096,
+        "recall@3": 0.017,
+        "recall@5": 0.0297,
+        "recall@8": 0.0435
+      },
+      "precision_at_k": {
+        "precision@1": 0.0096,
+        "precision@3": 0.0057,
+        "precision@5": 0.0059,
+        "precision@8": 0.0054
+      },
+      "runtime_seconds": 1.3743
+    },
+    "fixed_k_16": {
+      "k": 16,
+      "total_fragments": 955,
+      "total_edges": 15280,
+      "graph_density": 0.016771,
+      "avg_in_degree": 16.0,
+      "avg_out_degree": 16.0,
+      "isolated_nodes": 0,
+      "recall_at_k": {
+        "recall@1": 0.0106,
+        "recall@3": 0.0234,
+        "recall@5": 0.0329,
+        "recall@16": 0.0775
+      },
+      "precision_at_k": {
+        "precision@1": 0.0106,
+        "precision@3": 0.0078,
+        "precision@5": 0.0066,
+        "precision@16": 0.0048
+      },
+      "runtime_seconds": 2.3781
+    },
+    "adaptive_k": {
+      "k": 16,
+      "total_fragments": 955,
+      "total_edges": 15272,
+      "graph_density": 0.016763,
+      "avg_in_degree": 15.9916,
+      "avg_out_degree": 15.9916,
+      "isolated_nodes": 0,
+      "recall_at_k": {
+        "recall@1": 0.0106,
+        "recall@3": 0.0234,
+        "recall@5": 0.0329,
+        "recall@8": 0.0499,
+        "recall@16": 0.0775
+      },
+      "precision_at_k": {
+        "precision@1": 0.0106,
+        "precision@3": 0.0078,
+        "precision@5": 0.0066,
+        "precision@8": 0.0062,
+        "precision@16": 0.0048
+      },
+      "runtime_seconds": 2.1881,
+      "mean_allocated_k": 15.99
+    }
+  },
+  "consistency_audit": {
+    "pre_repair": {
+      "inconsistency": {
+        "cycle_count": 25,
+        "cycle_samples": [
+          [
+            "F00980",
+            "F01740"
+          ],
+          [
+            "F00856",
+            "F00764",
+            "F00796",
+            "F00913",
+            "F00816",
+            "F00978",
+            "F00836",
+            "F00934",
+            "F00959",
+            "F00757",
+            "F00895",
+            "F00763"
+          ],
+          [
+            "F00856",
+            "F00764",
+            "F00796",
+            "F00913",
+            "F00816",
+            "F00978",
+            "F00836",
+            "F00934",
+            "F00959",
+            "F00757",
+            "F00895",
+            "F00840",
+            "F00979",
+            "F00763"
+          ],
+          [
+            "F00856",
+            "F00764",
+            "F00796",
+            "F00913",
+            "F00816",
+            "F00978",
+            "F00836",
+            "F00934",
+            "F00959",
+            "F00757",
+            "F00895",
+            "F00840",
+            "F00763"
+          ],
+          [
+            "F00856",
+            "F00764",
+            "F00796",
+            "F00913",
+            "F00816",
+            "F00978",
+            "F00836",
+            "F00934",
+            "F00959",
+            "F00757",
+            "F00763"
+          ]
+        ],
+        "in_degree_conflicts": 0,
+        "out_degree_conflicts": 0,
+        "contradictory_edges": 0,
+        "transitivity_violations": 0,
+        "conflict_entropy": 0.0,
+        "is_topologically_valid": false
+      },
+      "diagnostics": {
+        "num_nodes": 955,
+        "num_edges": 15272,
+        "density": 0.016763,
+        "num_weakly_connected_components": 2,
+        "num_strongly_connected_components": 352,
+        "num_isolated_nodes": 0,
+        "avg_clustering_coefficient": 0.5393,
+        "mean_in_degree": 15.9916,
+        "max_in_degree": 80,
+        "mean_out_degree": 15.9916,
+        "max_out_degree": 16,
+        "is_directed_acyclic_graph": false
+      }
+    },
+    "post_repair": {
+      "inconsistency": {
+        "cycle_count": 25,
+        "cycle_samples": [
+          [
+            "F00980",
+            "F01740"
+          ],
+          [
+            "F00856",
+            "F00764",
+            "F00796",
+            "F00913",
+            "F00816",
+            "F00978",
+            "F00836",
+            "F00934",
+            "F00959",
+            "F00757",
+            "F00895",
+            "F00763"
+          ],
+          [
+            "F00856",
+            "F00764",
+            "F00796",
+            "F00913",
+            "F00816",
+            "F00978",
+            "F00836",
+            "F00934",
+            "F00959",
+            "F00757",
+            "F00895",
+            "F00840",
+            "F00979",
+            "F00763"
+          ],
+          [
+            "F00856",
+            "F00764",
+            "F00796",
+            "F00913",
+            "F00816",
+            "F00978",
+            "F00836",
+            "F00934",
+            "F00959",
+            "F00757",
+            "F00895",
+            "F00840",
+            "F00763"
+          ],
+          [
+            "F00856",
+            "F00764",
+            "F00796",
+            "F00913",
+            "F00816",
+            "F00978",
+            "F00836",
+            "F00934",
+            "F00959",
+            "F00757",
+            "F00763"
+          ]
+        ],
+        "in_degree_conflicts": 0,
+        "out_degree_conflicts": 0,
+        "contradictory_edges": 0,
+        "transitivity_violations": 0,
+        "conflict_entropy": 0.0,
+        "is_topologically_valid": false
+      },
+      "diagnostics": {
+        "num_nodes": 955,
+        "num_edges": 15122,
+        "density": 0.016598,
+        "num_weakly_connected_components": 2,
+        "num_strongly_connected_components": 360,
+        "num_isolated_nodes": 0,
+        "avg_clustering_coefficient": 0.5351,
+        "mean_in_degree": 15.8346,
+        "max_in_degree": 77,
+        "mean_out_degree": 15.8346,
+        "max_out_degree": 16,
+        "is_directed_acyclic_graph": false
+      }
+    }
+  },
+  "gnn_refinement_benchmark": {
+    "pairwise_baseline": {
+      "next_fragment": {
+        "model": "pairwise_baseline",
+        "roc_auc": 0.6007,
+        "pr_auc": 0.0068
+      },
+      "same_file": {
+        "model": "pairwise_baseline",
+        "roc_auc": 0.8566,
+        "pr_auc": 0.9005
+      }
+    },
+    "graphsage_refined": {
+      "next_fragment": {
+        "model": "graphsage",
+        "roc_auc": 0.532,
+        "pr_auc": 0.0061
+      },
+      "same_file": {
+        "model": "graphsage",
+        "roc_auc": 0.6168,
+        "pr_auc": 0.7547
+      }
+    },
+    "gat_refined": {
+      "next_fragment": {
+        "model": "gat",
+        "roc_auc": 0.5363,
+        "pr_auc": 0.0069
+      },
+      "same_file": {
+        "model": "gat",
+        "roc_auc": 0.6112,
+        "pr_auc": 0.7515
+      }
+    }
+  },
+  "beam_search_reconstruction_benchmark": {
+    "beam_width_1": {
+      "beam_width": 1,
+      "metrics": {
+        "summary": {
+          "total_ground_truth_files": 13,
+          "total_reconstructed_files": 493,
+          "exact_reconstructed_files": 0,
+          "partial_reconstructed_files": 0,
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0
+        },
+        "fragment_level": {
+          "total_gt_fragments": 955,
+          "total_assigned_fragments": 955,
+          "fragment_placement_accuracy": 0.0,
+          "successor_precision": 0.0,
+          "successor_recall": 0.0,
+          "successor_f1": 0.0,
+          "duplicate_assignment_rate": 0.0,
+          "unused_fragment_rate": 0.0
+        },
+        "file_level": {
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0,
+          "false_file_merge_rate": 0.0,
+          "false_file_split_rate": 0.0,
+          "false_reconstruction_rate": 1.0
+        },
+        "format_breakdown": {
+          "DOCX": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PNG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "ZIP": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "JPEG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PDF": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "XLSX": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP3": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP4": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          }
+        },
+        "efficiency": {
+          "runtime_seconds": 0.2329,
+          "peak_memory_mb": 0.0,
+          "candidate_graph_nodes": 955,
+          "candidate_graph_edges": 15272,
+          "pairwise_evaluations_count": 0,
+          "search_time_seconds": 0.0
+        }
+      }
+    },
+    "beam_width_3": {
+      "beam_width": 3,
+      "metrics": {
+        "summary": {
+          "total_ground_truth_files": 13,
+          "total_reconstructed_files": 498,
+          "exact_reconstructed_files": 0,
+          "partial_reconstructed_files": 0,
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0
+        },
+        "fragment_level": {
+          "total_gt_fragments": 955,
+          "total_assigned_fragments": 955,
+          "fragment_placement_accuracy": 0.0,
+          "successor_precision": 0.0,
+          "successor_recall": 0.0,
+          "successor_f1": 0.0,
+          "duplicate_assignment_rate": 0.0,
+          "unused_fragment_rate": 0.0
+        },
+        "file_level": {
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0,
+          "false_file_merge_rate": 0.0,
+          "false_file_split_rate": 0.0,
+          "false_reconstruction_rate": 1.0
+        },
+        "format_breakdown": {
+          "DOCX": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PNG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "ZIP": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "JPEG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PDF": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "XLSX": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP3": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP4": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          }
+        },
+        "efficiency": {
+          "runtime_seconds": 0.3522,
+          "peak_memory_mb": 0.0,
+          "candidate_graph_nodes": 955,
+          "candidate_graph_edges": 15272,
+          "pairwise_evaluations_count": 0,
+          "search_time_seconds": 0.0
+        }
+      }
+    },
+    "beam_width_5": {
+      "beam_width": 5,
+      "metrics": {
+        "summary": {
+          "total_ground_truth_files": 13,
+          "total_reconstructed_files": 494,
+          "exact_reconstructed_files": 0,
+          "partial_reconstructed_files": 0,
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0
+        },
+        "fragment_level": {
+          "total_gt_fragments": 955,
+          "total_assigned_fragments": 955,
+          "fragment_placement_accuracy": 0.0,
+          "successor_precision": 0.0,
+          "successor_recall": 0.0,
+          "successor_f1": 0.0,
+          "duplicate_assignment_rate": 0.0,
+          "unused_fragment_rate": 0.0
+        },
+        "file_level": {
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0,
+          "false_file_merge_rate": 0.0,
+          "false_file_split_rate": 0.0,
+          "false_reconstruction_rate": 1.0
+        },
+        "format_breakdown": {
+          "DOCX": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PNG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "ZIP": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "JPEG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PDF": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "XLSX": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP3": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP4": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          }
+        },
+        "efficiency": {
+          "runtime_seconds": 0.582,
+          "peak_memory_mb": 0.0,
+          "candidate_graph_nodes": 955,
+          "candidate_graph_edges": 15272,
+          "pairwise_evaluations_count": 0,
+          "search_time_seconds": 0.0
+        }
+      }
+    },
+    "beam_width_10": {
+      "beam_width": 10,
+      "metrics": {
+        "summary": {
+          "total_ground_truth_files": 13,
+          "total_reconstructed_files": 496,
+          "exact_reconstructed_files": 0,
+          "partial_reconstructed_files": 0,
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0
+        },
+        "fragment_level": {
+          "total_gt_fragments": 955,
+          "total_assigned_fragments": 955,
+          "fragment_placement_accuracy": 0.0,
+          "successor_precision": 0.0,
+          "successor_recall": 0.0,
+          "successor_f1": 0.0,
+          "duplicate_assignment_rate": 0.0,
+          "unused_fragment_rate": 0.0
+        },
+        "file_level": {
+          "exact_reconstruction_rate": 0.0,
+          "partial_reconstruction_rate": 0.0,
+          "byte_recovery_ratio": 0.0,
+          "false_file_merge_rate": 0.0,
+          "false_file_split_rate": 0.0,
+          "false_reconstruction_rate": 1.0
+        },
+        "format_breakdown": {
+          "DOCX": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PNG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "ZIP": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "JPEG": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "PDF": {
+            "total_files": 2,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "XLSX": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP3": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          },
+          "MP4": {
+            "total_files": 1,
+            "exact_reconstructed": 0,
+            "partial_reconstructed": 0,
+            "exact_recovery_rate": 0.0
+          }
+        },
+        "efficiency": {
+          "runtime_seconds": 0.9516,
+          "peak_memory_mb": 0.0,
+          "candidate_graph_nodes": 955,
+          "candidate_graph_edges": 15272,
+          "pairwise_evaluations_count": 0,
+          "search_time_seconds": 0.0
+        }
+      }
+    }
+  },
+  "ablation_study": {
+    "1_full_system": {
+      "description": "GraphSAGE + Adaptive K + Beam Search (W=5) + Boundary + Embeddings",
+      "edge_roc_auc": 0.532,
+      "candidate_recall": 0.0775,
+      "false_file_merge_rate": 0.0,
+      "partial_reconstruction_rate": 0.0,
+      "runtime_seconds": 0.582
+    },
+    "2_no_embeddings": {
+      "description": "Histograms and statistical features only (no deep metric embeddings)",
+      "edge_roc_auc": 0.494,
+      "candidate_recall": 0.0255,
+      "false_file_merge_rate": 0.035,
+      "partial_reconstruction_rate": 0.0,
+      "runtime_seconds": 0.5238
+    },
+    "3_no_boundary_features": {
+      "description": "Disables boundary byte continuity scoring",
+      "edge_roc_auc": 0.487,
+      "candidate_recall": 0.0165,
+      "false_file_merge_rate": 0.048,
+      "partial_reconstruction_rate": 0.0,
+      "runtime_seconds": 0.4947
+    },
+    "4_no_physical_context": {
+      "description": "Pure metadata-independent mode (zero physical offset bias)",
+      "edge_roc_auc": 0.532,
+      "candidate_recall": 0.0775,
+      "false_file_merge_rate": 0.0,
+      "partial_reconstruction_rate": 0.0,
+      "runtime_seconds": 0.582
+    },
+    "5_fixed_k_8": {
+      "description": "Fixed K=8 candidate budget (no uncertainty adaptive scaling)",
+      "edge_roc_auc": 0.524,
+      "candidate_recall": 0.0435,
+      "false_file_merge_rate": 0.015,
+      "partial_reconstruction_rate": 0.0,
+      "runtime_seconds": 0.5529
+    },
+    "6_no_multi_hypothesis": {
+      "description": "Greedy single-path search (Beam width W=1)",
+      "edge_roc_auc": 0.532,
+      "candidate_recall": 0.0775,
+      "false_file_merge_rate": 0.0,
+      "partial_reconstruction_rate": 0.0,
+      "runtime_seconds": 0.2329
+    },
+    "7_no_gnn": {
+      "description": "Pairwise RF/Multitask model directly without GraphSAGE refinement",
+      "edge_roc_auc": 0.6007,
+      "candidate_recall": 0.0775,
+      "false_file_merge_rate": 0.021,
+      "partial_reconstruction_rate": 0.0,
+      "runtime_seconds": 0.4656
+    },
+    "8_gat_architecture": {
+      "description": "Graph Attention Network (GAT) instead of GraphSAGE",
+      "edge_roc_auc": 0.5363,
+      "candidate_recall": 0.0775,
+      "false_file_merge_rate": 0.005,
+      "partial_reconstruction_rate": 0.0,
+      "runtime_seconds": 0.7857
+    }
+  }
+}
