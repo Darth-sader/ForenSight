@@ -1,0 +1,1307 @@
+{
+  "metadata": {
+    "version": "2.0.0-phase6",
+    "seed": 42,
+    "timestamp": "2026-11-23T15:25:04Z",
+    "runtime_seconds": 16.2,
+    "n_cal_files": 4,
+    "n_test_files": 13
+  },
+  "probability_calibration_benchmark": {
+    "next_fragment": {
+      "uncalibrated": {
+        "brier_score": 0.128,
+        "log_loss": 0.4001,
+        "ece": 0.0894,
+        "mce": 0.2729,
+        "reliability": {
+          "bin_centers": [
+            0.05,
+            0.15,
+            0.25,
+            0.35,
+            0.45,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_accuracies": [
+            0.0241,
+            0.2672,
+            0.5031,
+            0.3333,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bin_confidences": [
+            0.0616,
+            0.1484,
+            0.2302,
+            0.3072,
+            0.45,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_counts": [
+            2653,
+            2672,
+            324,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ece": 0.0894,
+          "mce": 0.2729
+        }
+      },
+      "platt_scaling": {
+        "brier_score": 0.1281,
+        "log_loss": 0.4002,
+        "ece": 0.0895,
+        "mce": 0.2731,
+        "reliability": {
+          "bin_centers": [
+            0.05,
+            0.15,
+            0.25,
+            0.35,
+            0.45,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_accuracies": [
+            0.0241,
+            0.2671,
+            0.5031,
+            0.3333,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bin_confidences": [
+            0.0619,
+            0.1485,
+            0.23,
+            0.3066,
+            0.45,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_counts": [
+            2652,
+            2673,
+            324,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ece": 0.0895,
+          "mce": 0.2731
+        }
+      },
+      "isotonic_regression": {
+        "brier_score": 0.1235,
+        "log_loss": 0.3787,
+        "ece": 0.0452,
+        "mce": 0.0893,
+        "reliability": {
+          "bin_centers": [
+            0.05,
+            0.15,
+            0.25,
+            0.35,
+            0.45,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_accuracies": [
+            0.0118,
+            0.1014,
+            0.2922,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bin_confidences": [
+            0.0057,
+            0.1907,
+            0.2225,
+            0.35,
+            0.45,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_counts": [
+            2289,
+            355,
+            3008,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ece": 0.0452,
+          "mce": 0.0893
+        }
+      },
+      "per_format_breakdown": {
+        "DOCX": {
+          "count": 440,
+          "brier_score": 0.0412,
+          "ece": 0.0638
+        },
+        "JPEG": {
+          "count": 666,
+          "brier_score": 0.0922,
+          "ece": 0.0466
+        },
+        "MP3": {
+          "count": 768,
+          "brier_score": 0.165,
+          "ece": 0.1406
+        },
+        "MP4": {
+          "count": 978,
+          "brier_score": 0.1963,
+          "ece": 0.145
+        },
+        "PDF": {
+          "count": 1457,
+          "brier_score": 0.1248,
+          "ece": 0.0082
+        },
+        "PNG": {
+          "count": 811,
+          "brier_score": 0.0971,
+          "ece": 0.045
+        },
+        "XLSX": {
+          "count": 43,
+          "brier_score": 0.1709,
+          "ece": 0.1754
+        },
+        "ZIP": {
+          "count": 489,
+          "brier_score": 0.0648,
+          "ece": 0.0705
+        }
+      }
+    },
+    "same_file": {
+      "uncalibrated": {
+        "brier_score": 0.1935,
+        "log_loss": 0.5617,
+        "ece": 0.1879,
+        "mce": 0.5847,
+        "reliability": {
+          "bin_centers": [
+            0.05,
+            0.15,
+            0.25,
+            0.35,
+            0.45,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_accuracies": [
+            0.0,
+            0.0247,
+            0.3791,
+            0.7131,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bin_confidences": [
+            0.05,
+            0.1689,
+            0.2594,
+            0.317,
+            0.4153,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_counts": [
+            0,
+            1944,
+            2743,
+            589,
+            376,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ece": 0.1879,
+          "mce": 0.5847
+        }
+      },
+      "platt_scaling": {
+        "brier_score": 0.1935,
+        "log_loss": 0.5619,
+        "ece": 0.1874,
+        "mce": 0.5851,
+        "reliability": {
+          "bin_centers": [
+            0.05,
+            0.15,
+            0.25,
+            0.35,
+            0.45,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_accuracies": [
+            0.0,
+            0.0243,
+            0.3779,
+            0.7119,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bin_confidences": [
+            0.05,
+            0.1691,
+            0.2594,
+            0.3171,
+            0.4149,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_counts": [
+            0,
+            1931,
+            2755,
+            590,
+            376,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ece": 0.1874,
+          "mce": 0.5851
+        }
+      },
+      "isotonic_regression": {
+        "brier_score": 0.1759,
+        "log_loss": 0.4971,
+        "ece": 0.0547,
+        "mce": 0.2461,
+        "reliability": {
+          "bin_centers": [
+            0.05,
+            0.15,
+            0.25,
+            0.35,
+            0.45,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_accuracies": [
+            0.0059,
+            0.039,
+            0.0912,
+            0.1026,
+            0.4974,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "bin_confidences": [
+            0.0042,
+            0.1048,
+            0.2537,
+            0.3486,
+            0.437,
+            0.55,
+            0.65,
+            0.75,
+            0.85,
+            0.95
+          ],
+          "bin_counts": [
+            1355,
+            231,
+            307,
+            78,
+            3681,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ece": 0.0547,
+          "mce": 0.2461
+        }
+      },
+      "per_format_breakdown": {
+        "DOCX": {
+          "count": 440,
+          "brier_score": 0.1286,
+          "ece": 0.2184
+        },
+        "JPEG": {
+          "count": 666,
+          "brier_score": 0.1867,
+          "ece": 0.1747
+        },
+        "MP3": {
+          "count": 768,
+          "brier_score": 0.1621,
+          "ece": 0.2906
+        },
+        "MP4": {
+          "count": 978,
+          "brier_score": 0.2083,
+          "ece": 0.2848
+        },
+        "PDF": {
+          "count": 1457,
+          "brier_score": 0.1788,
+          "ece": 0.0084
+        },
+        "PNG": {
+          "count": 811,
+          "brier_score": 0.1603,
+          "ece": 0.0408
+        },
+        "XLSX": {
+          "count": 43,
+          "brier_score": 0.2569,
+          "ece": 0.2083
+        },
+        "ZIP": {
+          "count": 489,
+          "brier_score": 0.1704,
+          "ece": 0.2316
+        }
+      }
+    }
+  },
+  "conformal_prediction_benchmark": {
+    "conformal_metrics": {
+      "alpha_0.01": {
+        "alpha": 0.01,
+        "target_coverage": 0.99,
+        "empirical_coverage": 0.971,
+        "quantile_threshold": 0.8722,
+        "mean_set_size": 1.4335,
+        "singleton_rate": 0.5665,
+        "ambiguity_rate": 0.4335,
+        "empty_rate": 0.0,
+        "coverage_gap": -0.019
+      },
+      "alpha_0.05": {
+        "alpha": 0.05,
+        "target_coverage": 0.95,
+        "empirical_coverage": 0.8914,
+        "quantile_threshold": 0.8288,
+        "mean_set_size": 1.1341,
+        "singleton_rate": 0.8659,
+        "ambiguity_rate": 0.1341,
+        "empty_rate": 0.0,
+        "coverage_gap": -0.0586
+      },
+      "alpha_0.1": {
+        "alpha": 0.1,
+        "target_coverage": 0.9,
+        "empirical_coverage": 0.8581,
+        "quantile_threshold": 0.7939,
+        "mean_set_size": 1.049,
+        "singleton_rate": 0.951,
+        "ambiguity_rate": 0.049,
+        "empty_rate": 0.0,
+        "coverage_gap": -0.0419
+      }
+    },
+    "pair_dependence_analysis": {
+      "exchangeability_status": "VIOLATED",
+      "violation_reasons": [
+        "Fragment Node Sharing: Successor transitions (u, v) and (u, w) share node u, creating correlated error residuals.",
+        "Format Clustering: Pairs within the same format exhibit non-exchangeable conditional score distributions.",
+        "Source File Dependencies: Disk allocation locality introduces spatial correlation absent in standard i.i.d. draws."
+      ],
+      "pair_sharing_statistics": {
+        "max_pairs_per_node": 45,
+        "mean_pairs_per_node": 5.92,
+        "total_source_files": 13
+      },
+      "recommendation": "Use group/clustered conformal prediction with conservative margin adjustments for forensic production."
+    }
+  },
+  "validation_hierarchy_breakdown": {
+    "tier_counts": {
+      "L5_L5_GROUND_TRUTH": 13
+    },
+    "verdict_distribution": {
+      "ACCEPTED": 13,
+      "PARTIAL": 0,
+      "UNCERTAIN": 0,
+      "REJECTED": 0
+    },
+    "risk_coverage_curve": [
+      {
+        "coverage": 0.1538,
+        "selective_risk": 0.0,
+        "selective_accuracy": 1.0,
+        "threshold": 0.2384
+      },
+      {
+        "coverage": 0.2308,
+        "selective_risk": 0.0,
+        "selective_accuracy": 1.0,
+        "threshold": 0.2384
+      },
+      {
+        "coverage": 0.3077,
+        "selective_risk": 0.0,
+        "selective_accuracy": 1.0,
+        "threshold": 0.2384
+      },
+      {
+        "coverage": 0.4615,
+        "selective_risk": 0.0,
+        "selective_accuracy": 1.0,
+        "threshold": 0.2384
+      },
+      {
+        "coverage": 0.5385,
+        "selective_risk": 0.0,
+        "selective_accuracy": 1.0,
+        "threshold": 0.2384
+      },
+      {
+        "coverage": 0.6154,
+        "selective_risk": 0.0,
+        "selective_accuracy": 1.0,
+        "threshold": 0.2384
+      },
+      {
+        "coverage": 0.7692,
+        "selective_risk": 0.1,
+        "selective_accuracy": 0.9,
+        "threshold": 0.2384
+      },
+      {
+        "coverage": 0.8462,
+        "selective_risk": 0.0909,
+        "selective_accuracy": 0.9091,
+        "threshold": 0.2384
+      },
+      {
+        "coverage": 0.9231,
+        "selective_risk": 0.0833,
+        "selective_accuracy": 0.9167,
+        "threshold": 0.2384
+      },
+      {
+        "coverage": 1.0,
+        "selective_risk": 0.0769,
+        "selective_accuracy": 0.9231,
+        "threshold": 0.2384
+      }
+    ]
+  },
+  "file_validation_details": [
+    {
+      "source_file": "archive27.zip",
+      "validation_result": {
+        "format_name": "ZIP",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 6656,
+        "sha256_hash": "f79e3556911eb8058cdeda477c62a0e49a8597328403d0fdadb9a8fd7c30fe5f",
+        "errors": [],
+        "warnings": [],
+        "extracted_metadata": {
+          "entries": [
+            "notes_0.txt",
+            "notes_1.txt",
+            "notes_2.txt",
+            "notes_3.txt",
+            "data_4.csv",
+            "blob.bin"
+          ],
+          "entry_count": 6,
+          "total_uncompressed_bytes": 134167
+        },
+        "execution_time_seconds": 0.0045
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_archive27.zip",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_archive27.zip",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "06f17f4ab74f3c6ee5af063f22f4485f56b1f54308282c2304732137e1a11dbd"
+    },
+    {
+      "source_file": "archive28.zip",
+      "validation_result": {
+        "format_name": "ZIP",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 9728,
+        "sha256_hash": "d479aeb4171d8cfa44a0eef57e55f4ae90ee0327b5c6de6299529ad6097de327",
+        "errors": [],
+        "warnings": [],
+        "extracted_metadata": {
+          "entries": [
+            "notes_0.txt",
+            "data_1.csv",
+            "data_2.csv",
+            "notes_3.txt",
+            "notes_4.txt",
+            "notes_5.txt",
+            "blob.bin"
+          ],
+          "entry_count": 7,
+          "total_uncompressed_bytes": 134949
+        },
+        "execution_time_seconds": 0.001
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_archive28.zip",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_archive28.zip",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "b564280a405a6d00c878f19120f1d813d3d1e3b73e609dcf13646132cd4b4768"
+    },
+    {
+      "source_file": "audio43.mp3",
+      "validation_result": {
+        "format_name": "MP3",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L5"
+        ],
+        "is_structurally_valid": false,
+        "is_fully_renderable": false,
+        "has_ground_truth_match": true,
+        "byte_length": 99840,
+        "sha256_hash": "6bafc2fca209bec6e4a3511fc00b5dc2aceddeccb088066b8c480245f9f45190",
+        "errors": [],
+        "warnings": [
+          "Could not maintain frame synchronization beyond 1 frame."
+        ],
+        "extracted_metadata": {
+          "has_id3": true,
+          "id3_size_bytes": 36,
+          "first_frame_offset": 46,
+          "bitrate_kbps": 128,
+          "samplerate_hz": 44100,
+          "consecutive_frames": 1,
+          "total_frames_parsed": 1
+        },
+        "execution_time_seconds": 0.0
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_audio43.mp3",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_audio43.mp3",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "3c2adb86f6b599e6a8704ed8a8f0c4fd6578443ac3f5c1d96694ed296884d002"
+    },
+    {
+      "source_file": "doc33.docx",
+      "validation_result": {
+        "format_name": "DOCX",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 4608,
+        "sha256_hash": "5444088c06621177945f6a84fd84e96ce1a4b2ff744c6c8536bb00e9bdab2b3b",
+        "errors": [],
+        "warnings": [],
+        "extracted_metadata": {
+          "entry_count": 3,
+          "has_content_types": true,
+          "has_document_xml": true,
+          "has_rels": true,
+          "document_xml_bytes": 23931,
+          "root_tag": "document",
+          "has_body": true
+        },
+        "execution_time_seconds": 0.002
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_doc33.docx",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_doc33.docx",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "00da2edeace900c1305f4cc43457ad005f854d296defeb4b4e34e0fe53f70d14"
+    },
+    {
+      "source_file": "doc34.docx",
+      "validation_result": {
+        "format_name": "DOCX",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 3584,
+        "sha256_hash": "a0585f1fded7ebfe7e64e8b8114a7df360757e33a283d416697bfc19784c0762",
+        "errors": [],
+        "warnings": [],
+        "extracted_metadata": {
+          "entry_count": 3,
+          "has_content_types": true,
+          "has_document_xml": true,
+          "has_rels": true,
+          "document_xml_bytes": 17375,
+          "root_tag": "document",
+          "has_body": true
+        },
+        "execution_time_seconds": 0.001
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_doc34.docx",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_doc34.docx",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "24580c62c7e075528dc5975ddfcc4412279595aff575ca99165cc9d7a346db83"
+    },
+    {
+      "source_file": "photo01.jpeg",
+      "validation_result": {
+        "format_name": "JPEG",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 16896,
+        "sha256_hash": "91b7312d31ad89ca12ea38ebd396efdc37d95ac3e09eeda9cc6fb4d622612869",
+        "errors": [],
+        "warnings": [
+          "EOI marker found at offset 16458, but file continues to 16896 (slack/trailing data)."
+        ],
+        "extracted_metadata": {
+          "dqt_tables": 2,
+          "dht_tables": 4,
+          "sof_found": true,
+          "sos_found": true,
+          "width": 220,
+          "height": 220,
+          "components": 3,
+          "pil_size": [
+            220,
+            220
+          ],
+          "pil_mode": "RGB"
+        },
+        "execution_time_seconds": 0.0461
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_photo01.jpeg",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_photo01.jpeg",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "7b123ce6ffb07460f5e6574a845548aaff30d4b6e99d0da3f07d4f4c48a5e5d3"
+    },
+    {
+      "source_file": "photo02.jpeg",
+      "validation_result": {
+        "format_name": "JPEG",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 17920,
+        "sha256_hash": "ee3a76aac1876ca8a29b022305ee3b15a33060b90231ab4a0610ab27c6bb22f1",
+        "errors": [],
+        "warnings": [],
+        "extracted_metadata": {
+          "dqt_tables": 2,
+          "dht_tables": 4,
+          "sof_found": true,
+          "sos_found": true,
+          "width": 220,
+          "height": 220,
+          "components": 3,
+          "pil_size": [
+            220,
+            220
+          ],
+          "pil_mode": "RGB"
+        },
+        "execution_time_seconds": 0.0022
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_photo02.jpeg",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_photo02.jpeg",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "34c89977899ff7d03958b245f98b4b372c4dc4dbea4cfa39219f96cb6358c2bd"
+    },
+    {
+      "source_file": "report19.pdf",
+      "validation_result": {
+        "format_name": "PDF",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": false,
+        "has_ground_truth_match": true,
+        "byte_length": 50688,
+        "sha256_hash": "2aee557c396b9fbe6e539d44fe1ad5ba8278c51aa9247e0802def4acbce59b50",
+        "errors": [],
+        "warnings": [
+          "Could not decompress embedded FlateDecode streams."
+        ],
+        "extracted_metadata": {
+          "pdf_version": "1.4",
+          "object_count": 13,
+          "endobj_count": 13,
+          "has_xref": true,
+          "has_trailer": true,
+          "stream_count": 5,
+          "streams_decompressed": 0
+        },
+        "execution_time_seconds": 0.006
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_report19.pdf",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_report19.pdf",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "817e9bb7e7850cce7309080c9dafc408e2ce35aec541b225d29b459ade481c53"
+    },
+    {
+      "source_file": "report20.pdf",
+      "validation_result": {
+        "format_name": "PDF",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": false,
+        "has_ground_truth_match": true,
+        "byte_length": 71168,
+        "sha256_hash": "232c6e528b969e19ba25ee5ce673aebcd7183aa647a89fce57261bc96192081b",
+        "errors": [],
+        "warnings": [
+          "Could not decompress embedded FlateDecode streams."
+        ],
+        "extracted_metadata": {
+          "pdf_version": "1.4",
+          "object_count": 17,
+          "endobj_count": 17,
+          "has_xref": true,
+          "has_trailer": true,
+          "stream_count": 7,
+          "streams_decompressed": 0
+        },
+        "execution_time_seconds": 0.0055
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_report20.pdf",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_report20.pdf",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "8d9b8c4064cf873dac76d119b8baa8d371e1f2e447622a113e3cebddca3a0809"
+    },
+    {
+      "source_file": "scan11.png",
+      "validation_result": {
+        "format_name": "PNG",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 26624,
+        "sha256_hash": "697b4ca2ef527361d62804424abce88a7f41ab4adf299d6805258fdb7d48b289",
+        "errors": [],
+        "warnings": [],
+        "extracted_metadata": {
+          "width": 186,
+          "height": 115,
+          "bit_depth": 8,
+          "color_type": 2,
+          "chunks": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "crc_failures": 0,
+          "idat_count": 1,
+          "decompressed_bytes": 64285,
+          "pil_size": [
+            186,
+            115
+          ],
+          "pil_mode": "RGB"
+        },
+        "execution_time_seconds": 0.001
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_scan11.png",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_scan11.png",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "e35e85e5f1515898164f801e7890f1e0af42e31521ce331769a673442295ceac"
+    },
+    {
+      "source_file": "scan12.png",
+      "validation_result": {
+        "format_name": "PNG",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 28160,
+        "sha256_hash": "ba14d862a3e301770f4ebca6667bdaf72716b57f78430bcc84c0de3bb3b38160",
+        "errors": [],
+        "warnings": [],
+        "extracted_metadata": {
+          "width": 153,
+          "height": 141,
+          "bit_depth": 8,
+          "color_type": 2,
+          "chunks": [
+            "IHDR",
+            "IDAT",
+            "IEND"
+          ],
+          "crc_failures": 0,
+          "idat_count": 1,
+          "decompressed_bytes": 64860,
+          "pil_size": [
+            153,
+            141
+          ],
+          "pil_mode": "RGB"
+        },
+        "execution_time_seconds": 0.001
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_scan12.png",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_scan12.png",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "082be367ac9e407c52961cf0ee53aad417d60f64614e368d2f371d625bce394a"
+    },
+    {
+      "source_file": "sheet39.xlsx",
+      "validation_result": {
+        "format_name": "XLSX",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 6144,
+        "sha256_hash": "dafd30e4a4ee0d6edbbb7e670cfb1f502ea421e1f2f53bb89f167ff0674a53e0",
+        "errors": [],
+        "warnings": [],
+        "extracted_metadata": {
+          "entry_count": 5,
+          "has_content_types": true,
+          "has_workbook_xml": true,
+          "worksheet_count": 1,
+          "workbook_xml_bytes": 281,
+          "root_tag": "workbook",
+          "has_sheets": true
+        },
+        "execution_time_seconds": 0.002
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_sheet39.xlsx",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_sheet39.xlsx",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "5502d36aa393e44ebc5d2dcc1eb532857f9b83c55470c80b8dd520037128cbfe"
+    },
+    {
+      "source_file": "video47.mp4",
+      "validation_result": {
+        "format_name": "MP4",
+        "highest_passed_level": "L5_L5_GROUND_TRUTH",
+        "passed_levels": [
+          "L0",
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5"
+        ],
+        "is_structurally_valid": true,
+        "is_fully_renderable": true,
+        "has_ground_truth_match": true,
+        "byte_length": 146944,
+        "sha256_hash": "56b9ffbe0b3ff2ef7003d01030f28e6db5858adc32c6fb034aa7c36a4726b8c3",
+        "errors": [],
+        "warnings": [],
+        "extracted_metadata": {
+          "boxes": [
+            "ftyp",
+            "mdat",
+            "moov",
+            "\u0000\u0000\u0000\u0000"
+          ],
+          "moov_found": true,
+          "mdat_found": true,
+          "has_mvhd": true,
+          "has_trak": true,
+          "timescale": 1000,
+          "duration_ticks": 65536,
+          "duration_seconds": 65.54
+        },
+        "execution_time_seconds": 0.0
+      },
+      "uncertainty_signal": {
+        "recon_id": "recon_video47.mp4",
+        "predictive_entropy": 0.469,
+        "ensemble_variance": 0.0,
+        "alternative_margin": 1.2,
+        "graph_ambiguity": 0.05,
+        "gap_penalty_ratio": 0.0,
+        "validation_level": "L5_L5_GROUND_TRUTH",
+        "competing_hypothesis_count": 1,
+        "composite_uncertainty_score": 0.2384
+      },
+      "verdict": {
+        "recon_id": "recon_video47.mp4",
+        "outcome": "ACCEPTED",
+        "achieved_validation_level": "L5_L5_GROUND_TRUTH",
+        "composite_uncertainty": 0.2384,
+        "decision_rationale": "Meets full evidence criteria: structural parsing passed, zero unresolved gaps, low uncertainty.",
+        "is_forensically_usable": true,
+        "requires_human_inspection": false
+      },
+      "provenance_hash": "4510e130e725c6e8707afe85046d970acee192d72ff24ab8795ec0539c977607"
+    }
+  ]
+}
