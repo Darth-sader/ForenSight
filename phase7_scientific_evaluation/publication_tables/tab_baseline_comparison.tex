@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{Comparative performance of ForenSight against 9 baseline systems on the held-out test partition ($N=13$ independent files, 955 fragments).}
+\label{tab:baseline_comparison}
+\begin{tabular}{lrrrrrrr}
+\toprule
+\textbf{Method / Architecture} & \textbf{$R_{\text{exact}}$} & \textbf{$R_{\text{partial}}$} & \textbf{$B_{\text{ratio}}$} & \textbf{$P_{\text{frag}}$} & \textbf{$M_{\text{false}}$} & \textbf{$S_{\text{false}}$} & \textbf{Time (s)} \\
+\midrule
+PhotoRec v7.2 (Carver Baseline) & 0.000 & 0.000 & 0.000 & 0.0010 & 1.0000 & 0.0000 & 0.00 \\
+Scalpel v2.0 (Rule-Based Carver) & 0.000 & 0.000 & 0.000 & 0.0010 & 1.0000 & 0.0000 & 0.00 \\
+Original ForenSight v1 (Next-Only Beam Search) & 0.000 & 0.000 & 0.000 & 0.0209 & 0.1484 & 1.0000 & 0.62 \\
+Leakage-Free Pairwise RF (Greedy Chain) & 0.000 & 0.000 & 0.000 & 0.0178 & 0.1711 & 1.0000 & 0.00 \\
+Same-File-Only Reconstruction (Variant B) & 0.000 & 0.000 & 0.000 & 0.0136 & 0.0144 & 1.0000 & 0.00 \\
+Next-Fragment-Only Reconstruction (Variant A) & 0.000 & 0.000 & 0.000 & 0.0178 & 0.1455 & 1.0000 & 0.50 \\
+Dual-Relation Independent Reconstruction (Variant C) & 0.000 & 0.000 & 0.000 & 0.0147 & 0.0461 & 1.0000 & 0.28 \\
+Multi-Task Dual Model (Variant D) & 0.000 & 0.000 & 0.000 & 0.0178 & 0.0572 & 1.0000 & 0.26 \\
+GNN Relational Refinement (GraphSAGE/GAT) & 0.000 & 0.000 & 0.000 & 0.0147 & 0.0535 & 1.0000 & 0.24 \\
+ForenSight Full Framework (Method D + Phase 6) & 0.000 & 0.000 & 0.000 & 0.0178 & 0.3455 & 0.8462 & 11.68 \\
+\bottomrule
+\end{tabular}
+\end{table*}

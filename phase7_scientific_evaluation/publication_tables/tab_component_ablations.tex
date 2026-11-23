@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering
+\caption{Ablation analysis across 12 architectural dimensions of the ForenSight framework.}
+\label{tab:component_ablations}
+\begin{tabular}{lrrrrrr}
+\toprule
+\textbf{Ablation Configuration} & \textbf{$R_{\text{exact}}$} & \textbf{$P_{\text{frag}}$} & \textbf{$M_{\text{false}}$} & \textbf{$S_{\text{false}}$} & \textbf{$\Delta P_{\text{frag}}$} & \textbf{Time (s)} \\
+\midrule
+Full Framework (All Components Active) & 0.000 & 0.0178 & 0.3455 & 0.8462 & +0.0000 & 6.87 \\
+w/o Same-File Model (P_same = 1.0) & 0.000 & 0.0199 & 0.0595 & 1.0000 & +0.0021 & 1.14 \\
+w/o Next-Fragment Model (Uniform P_next) & 0.000 & 0.0168 & 0.1154 & 0.6923 & -0.0010 & 59.59 \\
+w/o Candidate Generator (Sparse vs Heuristic) & 0.000 & 0.0178 & 0.3455 & 0.8462 & +0.0000 & 5.42 \\
+w/o MTZ Subtour Elimination & 0.000 & 0.0168 & 0.1979 & 0.8462 & -0.0010 & 0.92 \\
+w/o Format Boundary Constraints & 0.000 & 0.0042 & 0.5758 & 0.8462 & -0.0136 & 7.72 \\
+w/o Missing Fragment Gap Model & 0.000 & 0.0178 & 0.3455 & 0.8462 & +0.0000 & 5.70 \\
+w/o Multi-Tier Format Validation (Unchecked) & 0.000 & 0.0178 & 0.3455 & 0.8462 & +0.0000 & 6.20 \\
+w/o Probability Calibration (Raw RF Output) & 0.000 & 0.0178 & 0.3455 & 0.8462 & +0.0000 & 5.81 \\
+w/o Uncertainty Scoring / Conformal Bounds & 0.000 & 0.0178 & 0.3455 & 0.8462 & +0.0000 & 6.73 \\
+w/o Cost-Sensitive Abstention (Force Accept) & 0.000 & 0.0178 & 0.3455 & 0.8462 & +0.0000 & 6.89 \\
+w/o Global MILP (Single Greedy Beam W=1) & 0.000 & 0.0157 & 0.0563 & 1.0000 & -0.0021 & 0.21 \\
+w/o Cryptographic Chain-of-Custody & 0.000 & 0.0178 & 0.3455 & 0.8462 & +0.0000 & 7.00 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\caption{Non-parametric paired hypothesis tests and effect sizes comparing ForenSight Full against all baselines on source files ($N=13$).}
+\label{tab:statistical_significance}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Baseline Method} & \textbf{Cliff's $\delta$} & \textbf{Magnitude} & \textbf{Wilcoxon $p$} & \textbf{BH Adj. $p$} & \textbf{Significant ($q=0.05$)} \\
+\midrule
+PhotoRec v7.2 (Carver Baseline) & +0.9763 & Large & 2.4414e-04 & 1.0990e-03 & \textbf{Yes} \\
+Scalpel v2.0 (Rule-Based Carver) & +0.9763 & Large & 2.4414e-04 & 1.0990e-03 & \textbf{Yes} \\
+Original ForenSight v1 (Next-Only Beam Search) & -0.4201 & Medium & 4.7852e-02 & 1.4355e-01 & \textbf{No} \\
+Leakage-Free Pairwise RF (Greedy Chain) & -0.0296 & Negligible & 9.4604e-01 & 9.4605e-01 & \textbf{No} \\
+Same-File-Only Reconstruction (Variant B) & +0.3964 & Medium & 1.6772e-01 & 3.4365e-01 & \textbf{No} \\
+Next-Fragment-Only Reconstruction (Variant A) & -0.2189 & Small & 5.4175e-01 & 6.6138e-01 & \textbf{No} \\
+Dual-Relation Independent Reconstruction (Variant C) & +0.0769 & Negligible & 5.8789e-01 & 6.6138e-01 & \textbf{No} \\
+Multi-Task Dual Model (Variant D) & +0.1006 & Negligible & 5.8789e-01 & 6.6138e-01 & \textbf{No} \\
+GNN Relational Refinement (GraphSAGE/GAT) & +0.3254 & Small & 1.9092e-01 & 3.4365e-01 & \textbf{No} \\
+\bottomrule
+\end{tabular}
+\end{table*}

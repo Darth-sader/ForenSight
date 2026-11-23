@@ -1,0 +1,14 @@
+ablation_id,ablation_name,exact_rate,partial_rate,byte_recovery_ratio,placement_accuracy,false_merge_rate,false_split_rate,runtime_seconds
+A00_Full_ForenSight,Full Framework (All Components Active),0.0,0.0,0.0,0.0178,0.3455,0.8462,6.8666
+A01_No_SameFile_Model,w/o Same-File Model (P_same = 1.0),0.0,0.0,0.0,0.0199,0.0595,1.0,1.1397
+A02_No_NextFragment_Model,w/o Next-Fragment Model (Uniform P_next),0.0,0.0,0.0,0.0168,0.1154,0.6923,59.5879
+A03_No_Candidate_Generator,w/o Candidate Generator (Sparse vs Heuristic),0.0,0.0,0.0,0.0178,0.3455,0.8462,5.4214
+A04_No_MTZ_Constraints,w/o MTZ Subtour Elimination,0.0,0.0,0.0,0.0168,0.1979,0.8462,0.9171
+A05_No_Format_Constraints,w/o Format Boundary Constraints,0.0,0.0,0.0,0.0042,0.5758,0.8462,7.7228
+A06_No_Gap_Model,w/o Missing Fragment Gap Model,0.0,0.0,0.0,0.0178,0.3455,0.8462,5.6981
+A07_No_Format_Validation,w/o Multi-Tier Format Validation (Unchecked),0.0,0.0,0.0,0.0178,0.3455,0.8462,6.201
+A08_No_Probability_Calibration,w/o Probability Calibration (Raw RF Output),0.0,0.0,0.0,0.0178,0.3455,0.8462,5.8082
+A09_No_Uncertainty_Scoring,w/o Uncertainty Scoring / Conformal Bounds,0.0,0.0,0.0,0.0178,0.3455,0.8462,6.729
+A10_No_Abstention_Policy,w/o Cost-Sensitive Abstention (Force Accept),0.0,0.0,0.0,0.0178,0.3455,0.8462,6.8852
+A11_Single_Path_Beam_Search,w/o Global MILP (Single Greedy Beam W=1),0.0,0.0,0.0,0.0157,0.0563,1.0,0.2078
+A12_No_Provenance_Tracking,w/o Cryptographic Chain-of-Custody,0.0,0.0,0.0,0.0178,0.3455,0.8462,7.0008

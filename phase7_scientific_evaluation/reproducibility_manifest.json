@@ -1,0 +1,84 @@
+{
+  "manifest_schema_version": "1.0.0",
+  "project_name": "ForenSight",
+  "protocol_version": "2.0.0-phase7",
+  "publication_target": "Forensic Science International: Digital Investigation (FSI:DI)",
+  "creation_timestamp_utc": "2026-11-23T15:30:00Z",
+  "environment": {
+    "os": "Windows-11-10.0.26300-SP0",
+    "python_version": "3.12.5 (tags/v3.12.5:ff3bc82, Aug 6 2024, 20:45:27) [MSC v.1940 64 bit (AMD64)]",
+    "torch_version": "2.14.1+cpu",
+    "scikit_learn_version": "1.7.1",
+    "scipy_version": "1.14.1",
+    "networkx_version": "3.6.1",
+    "matplotlib_version": "3.9.2",
+    "hardware": {
+      "architecture": "AMD64",
+      "instruction_set": "x86_64",
+      "cpu_count_logical": 16,
+      "cpu_count_physical": 8
+    }
+  },
+  "random_seeds": {
+    "global_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "sklearn_random_state": 42,
+    "candidate_generator_seed": 42
+  },
+  "artifact_hashes_sha256": {
+    "split_manifest": {
+      "path": "phase1_leakage_free/split_manifest.json",
+      "sha256": "3d94b451215dc65708a188ffe9ab254453f0e92b6536d54ddefb83dd6cc7ac2c",
+      "description": "Four-way disjoint split manifest (28 train, 5 val, 4 cal, 13 test files)"
+    },
+    "feature_preprocessor": {
+      "path": "phase1_leakage_free/artifacts/preprocessor.joblib",
+      "sha256": "a95a288e48d5d337044788c9f25f779f9b9968b61c0e3a58f788a4a4d8402a8a",
+      "description": "StandardScaler and feature metadata for leakage-free 362-d feature space"
+    },
+    "dataset_v2_manifest": {
+      "path": "phase2_dataset_evaluation/dataset_manifest.json",
+      "sha256": "8c4dc50ec983184b4373c17963cf341181ff1a0c20639a4c756386cb682beab5",
+      "description": "Dataset v2 manifest with 72 diverse files across 8 formats"
+    },
+    "same_file_rf_model": {
+      "path": "phase3_dual_relation/artifacts/same_file_rf.joblib",
+      "sha256": "e4aa9aa271daa4a7a62c3d76d7b997d1d634c523e321a7c980c093d334e7fe95",
+      "description": "Symmetric Random Forest classifier predicting P_same"
+    },
+    "next_fragment_rf_model": {
+      "path": "phase3_dual_relation/artifacts/next_fragment_rf.joblib",
+      "sha256": "aa30b66684485092f650b3947a6d8658a50d0af32d25798603c8ce3acefed648",
+      "description": "Asymmetric Random Forest classifier predicting P_next"
+    },
+    "phase5_optimization_results": {
+      "path": "phase5_constrained_optimization/optimization_results.json",
+      "sha256": "8909addb12095421c140cb0db64678b43fd2a11243b8b76d5e72b38fbe3f57cd",
+      "description": "Empirical comparison of MILP vs Greedy Beam Search across scenarios"
+    },
+    "phase6_uncertainty_results": {
+      "path": "phase6_forensic_validation/uncertainty_results.json",
+      "sha256": "0e6522e59dcd9b4fc17d6205ac2bd7cb6f89ae89cca66d7b5b9f3f3cffa75409",
+      "description": "Calibration and conformal prediction evaluation results"
+    }
+  },
+  "replication_protocol": {
+    "precondition": "Python 3.12+ with virtual environment activated.",
+    "commands": [
+      "python phase1_leakage_free/run_pipeline.py",
+      "python phase2_dataset_evaluation/generate_dataset_v2.py",
+      "python phase3_dual_relation/train_dual_models.py",
+      "python phase4_graph_inference/run_phase4_evaluation.py",
+      "python phase5_constrained_optimization/evaluation_phase5.py",
+      "python phase6_forensic_validation/evaluation_phase6.py",
+      "python phase7_scientific_evaluation/run_phase7_benchmarks.py"
+    ]
+  },
+  "preservation_policy_attestation": {
+    "original_codebase_unmodified": true,
+    "original_dataset_unmodified": true,
+    "original_manifests_unmodified": true,
+    "leakage_free_separation_enforced": true
+  }
+}

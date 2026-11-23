@@ -1,0 +1,11 @@
+baseline_id,method_name,exact_rate,partial_rate,byte_recovery_ratio,placement_accuracy,false_merge_rate,false_split_rate,runtime_seconds
+B01_PhotoRec_v7.2,PhotoRec v7.2 (Carver Baseline),0.0,0.0,0.0,0.001,1.0,0.0,0.001
+B02_Scalpel_v2.0,Scalpel v2.0 (Rule-Based Carver),0.0,0.0,0.0,0.001,1.0,0.0,0.0
+B03_Original_ForenSight_v1,Original ForenSight v1 (Next-Only Beam Search),0.0,0.0,0.0,0.0209,0.1484,1.0,0.6226
+B04_LeakageFree_Pairwise_RF,Leakage-Free Pairwise RF (Greedy Chain),0.0,0.0,0.0,0.0178,0.1711,1.0,0.0035
+B05_SameFile_Only_VariantB,Same-File-Only Reconstruction (Variant B),0.0,0.0,0.0,0.0136,0.0144,1.0,0.0012
+B06_NextFragment_Only_VariantA,Next-Fragment-Only Reconstruction (Variant A),0.0,0.0,0.0,0.0178,0.1455,1.0,0.4967
+B07_DualRelation_Independent_VariantC,Dual-Relation Independent Reconstruction (Variant C),0.0,0.0,0.0,0.0147,0.0461,1.0,0.285
+B08_MultiTask_Dual_VariantD,Multi-Task Dual Model (Variant D),0.0,0.0,0.0,0.0178,0.0572,1.0,0.2612
+B09_GNN_Relational_Refinement,GNN Relational Refinement (GraphSAGE/GAT),0.0,0.0,0.0,0.0147,0.0535,1.0,0.2432
+B10_ForenSight_Full_Framework,ForenSight Full Framework (Method D + Phase 6),0.0,0.0,0.0,0.0178,0.3455,0.8462,11.6782

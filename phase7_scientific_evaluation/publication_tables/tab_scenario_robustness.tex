@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{Forensic robustness evaluation of ForenSight Full across 11 systematic disk fragmentation scenarios.}
+\label{tab:scenario_robustness}
+\begin{tabular}{llrrrrr}
+\toprule
+\textbf{Scenario Identifier} & \textbf{Stress Characteristics} & \textbf{$R_{\text{exact}}$} & \textbf{$R_{\text{partial}}$} & \textbf{$P_{\text{frag}}$} & \textbf{$M_{\text{false}}$} & \textbf{$S_{\text{false}}$} \\
+\midrule
+SCEN_A_CONTIG_CLEAN & Contiguous Clean Placement & 1.00 & 0.00 & 1.00 & 0.00 & 0.00 \\
+SCEN_B_LOW_FRAG_2F & Low Fragmentation (2 files, interleave 1) & 1.00 & 0.00 & 1.00 & 0.00 & 0.00 \\
+SCEN_C_MED_FRAG_5F & Medium Fragmentation (5 files, interleave 3) & 0.80 & 0.00 & 0.88 & 0.00 & 0.12 \\
+SCEN_D_HIGH_FRAG_10F & High Fragmentation (10 files, interleave 6) & 0.70 & 0.05 & 0.75 & 0.10 & 0.25 \\
+SCEN_E_EXTREME_FRAG_15F & Extreme Fragmentation (15 files, interleave 12) & 0.60 & 0.08 & 0.68 & 0.15 & 0.32 \\
+SCEN_F_CORRUPT_C05 & Payload Corruption (5% byte corruption) & 0.85 & 0.00 & 0.92 & 0.00 & 0.08 \\
+SCEN_G_CORRUPT_C20 & Severe Payload Corruption (20% byte corruption) & 0.40 & 0.00 & 0.65 & 0.00 & 0.35 \\
+SCEN_H_MISSING_M05 & Missing Fragments (5% dropped blocks) & 0.00 & 0.95 & 0.82 & 0.00 & 0.18 \\
+SCEN_I_MISSING_M20 & Severe Missing Fragments (20% dropped blocks) & 0.00 & 0.80 & 0.64 & 0.00 & 0.36 \\
+SCEN_J_DECOY_D15 & Decoy Resistance (15 injected noise fragments) & 0.80 & 0.00 & 0.90 & 0.00 & 0.10 \\
+SCEN_K_ADVERSARIAL_STORM & Adversarial Stress (10F, 10% C, 10% M, 20 decoys) & 0.30 & 0.60 & 0.58 & 0.08 & 0.42 \\
+\bottomrule
+\end{tabular}
+\end{table*}

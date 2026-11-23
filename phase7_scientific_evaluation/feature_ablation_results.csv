@@ -1,0 +1,7 @@
+feature_ablation_id,feature_set_name,mean_p_same,mean_p_next,std_p_next,retained_feature_count
+FF0_All_362_Features,Full 362-d Pairwise Feature Vector,0.6706,0.5147,0.1261,362
+FF1_No_Byte_Frequency,w/o Byte Frequency Histogram (Dims 0-255 zeroed),0.6562,0.5006,0.1108,106
+FF2_No_Structural_Signatures,w/o Structural Signatures (Dims 271-320 zeroed),0.4815,0.3058,0.0587,312
+FF3_No_Boundary_Continuity,w/o Boundary Continuity (Dims 321-361 zeroed),0.5886,0.4528,0.0948,321
+FF4_No_Statistical_Dispersion,w/o Statistical Dispersion (Dims 256-270 zeroed),0.4157,0.3206,0.0769,347
+FF5_Minimal_Features,Minimal Baseline (Only Length & Physical Distance),0.3962,0.199,0.0,2

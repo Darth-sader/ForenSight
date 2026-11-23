@@ -1,0 +1,244 @@
+{
+  "metadata": {
+    "version": "2.0.0-phase7",
+    "seed": 42,
+    "n_files": 13,
+    "bootstrap_replications": 1000,
+    "alpha": 0.05,
+    "correction_method": "Benjamini-Hochberg FDR (q=0.05)"
+  },
+  "bootstrap_confidence_intervals": {
+    "B01_PhotoRec_v7.2": {
+      "placement_accuracy": [
+        0.0007,
+        0.004
+      ],
+      "false_merge_rate": [
+        0.9465,
+        0.9878
+      ],
+      "false_split_rate": [
+        0.0038,
+        0.028
+      ]
+    },
+    "B02_Scalpel_v2.0": {
+      "placement_accuracy": [
+        0.001,
+        0.0042
+      ],
+      "false_merge_rate": [
+        0.9841,
+        0.9971
+      ],
+      "false_split_rate": [
+        0.0042,
+        0.0221
+      ]
+    },
+    "B03_Original_ForenSight_v1": {
+      "placement_accuracy": [
+        0.019,
+        0.0231
+      ],
+      "false_merge_rate": [
+        0.104,
+        0.1703
+      ],
+      "false_split_rate": [
+        0.9653,
+        0.9948
+      ]
+    },
+    "B04_LeakageFree_Pairwise_RF": {
+      "placement_accuracy": [
+        0.0154,
+        0.0213
+      ],
+      "false_merge_rate": [
+        0.1523,
+        0.2004
+      ],
+      "false_split_rate": [
+        0.9525,
+        0.9903
+      ]
+    },
+    "B05_SameFile_Only_VariantB": {
+      "placement_accuracy": [
+        0.0121,
+        0.0165
+      ],
+      "false_merge_rate": [
+        0.0112,
+        0.0454
+      ],
+      "false_split_rate": [
+        0.9694,
+        0.9893
+      ]
+    },
+    "B06_NextFragment_Only_VariantA": {
+      "placement_accuracy": [
+        0.0169,
+        0.0225
+      ],
+      "false_merge_rate": [
+        0.1195,
+        0.1593
+      ],
+      "false_split_rate": [
+        0.958,
+        0.9905
+      ]
+    },
+    "B07_DualRelation_Independent_VariantC": {
+      "placement_accuracy": [
+        0.014,
+        0.0191
+      ],
+      "false_merge_rate": [
+        0.0334,
+        0.0862
+      ],
+      "false_split_rate": [
+        0.9656,
+        0.9945
+      ]
+    },
+    "B08_MultiTask_Dual_VariantD": {
+      "placement_accuracy": [
+        0.0125,
+        0.0202
+      ],
+      "false_merge_rate": [
+        0.0425,
+        0.0757
+      ],
+      "false_split_rate": [
+        0.9808,
+        0.9994
+      ]
+    },
+    "B09_GNN_Relational_Refinement": {
+      "placement_accuracy": [
+        0.0119,
+        0.0173
+      ],
+      "false_merge_rate": [
+        0.0358,
+        0.0715
+      ],
+      "false_split_rate": [
+        0.9734,
+        0.9967
+      ]
+    },
+    "B10_ForenSight_Full_Framework": {
+      "placement_accuracy": [
+        0.0146,
+        0.0207
+      ],
+      "false_merge_rate": [
+        0.3289,
+        0.3855
+      ],
+      "false_split_rate": [
+        0.8391,
+        0.8949
+      ]
+    }
+  },
+  "pairwise_hypothesis_tests": [
+    {
+      "baseline_id": "B01_PhotoRec_v7.2",
+      "method_name": "PhotoRec v7.2 (Carver Baseline)",
+      "cliffs_delta": 0.9763,
+      "effect_size": "Large",
+      "raw_p_value": 0.000244140625,
+      "statistic": 0.0,
+      "adjusted_p_value": 0.001099,
+      "significant_at_fdr_05": true
+    },
+    {
+      "baseline_id": "B02_Scalpel_v2.0",
+      "method_name": "Scalpel v2.0 (Rule-Based Carver)",
+      "cliffs_delta": 0.9763,
+      "effect_size": "Large",
+      "raw_p_value": 0.000244140625,
+      "statistic": 0.0,
+      "adjusted_p_value": 0.001099,
+      "significant_at_fdr_05": true
+    },
+    {
+      "baseline_id": "B03_Original_ForenSight_v1",
+      "method_name": "Original ForenSight v1 (Next-Only Beam Search)",
+      "cliffs_delta": -0.4201,
+      "effect_size": "Medium",
+      "raw_p_value": 0.0478515625,
+      "statistic": 17.0,
+      "adjusted_p_value": 0.143555,
+      "significant_at_fdr_05": false
+    },
+    {
+      "baseline_id": "B04_LeakageFree_Pairwise_RF",
+      "method_name": "Leakage-Free Pairwise RF (Greedy Chain)",
+      "cliffs_delta": -0.0296,
+      "effect_size": "Negligible",
+      "raw_p_value": 0.946044921875,
+      "statistic": 44.0,
+      "adjusted_p_value": 0.946045,
+      "significant_at_fdr_05": false
+    },
+    {
+      "baseline_id": "B05_SameFile_Only_VariantB",
+      "method_name": "Same-File-Only Reconstruction (Variant B)",
+      "cliffs_delta": 0.3964,
+      "effect_size": "Medium",
+      "raw_p_value": 0.167724609375,
+      "statistic": 25.0,
+      "adjusted_p_value": 0.343652,
+      "significant_at_fdr_05": false
+    },
+    {
+      "baseline_id": "B06_NextFragment_Only_VariantA",
+      "method_name": "Next-Fragment-Only Reconstruction (Variant A)",
+      "cliffs_delta": -0.2189,
+      "effect_size": "Small",
+      "raw_p_value": 0.541748046875,
+      "statistic": 36.0,
+      "adjusted_p_value": 0.661377,
+      "significant_at_fdr_05": false
+    },
+    {
+      "baseline_id": "B07_DualRelation_Independent_VariantC",
+      "method_name": "Dual-Relation Independent Reconstruction (Variant C)",
+      "cliffs_delta": 0.0769,
+      "effect_size": "Negligible",
+      "raw_p_value": 0.587890625,
+      "statistic": 37.0,
+      "adjusted_p_value": 0.661377,
+      "significant_at_fdr_05": false
+    },
+    {
+      "baseline_id": "B08_MultiTask_Dual_VariantD",
+      "method_name": "Multi-Task Dual Model (Variant D)",
+      "cliffs_delta": 0.1006,
+      "effect_size": "Negligible",
+      "raw_p_value": 0.587890625,
+      "statistic": 37.0,
+      "adjusted_p_value": 0.661377,
+      "significant_at_fdr_05": false
+    },
+    {
+      "baseline_id": "B09_GNN_Relational_Refinement",
+      "method_name": "GNN Relational Refinement (GraphSAGE/GAT)",
+      "cliffs_delta": 0.3254,
+      "effect_size": "Small",
+      "raw_p_value": 0.19091796875,
+      "statistic": 26.0,
+      "adjusted_p_value": 0.343652,
+      "significant_at_fdr_05": false
+    }
+  ]
+}

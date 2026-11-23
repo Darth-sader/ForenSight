@@ -1,0 +1,7 @@
+fragment_count_N,dense_pairwise_count,sparse_candidate_edges,search_space_reduction_pct,candidate_generation_time_sec,optimization_solve_time_sec,total_pipeline_time_sec,peak_memory_mb
+50,2450,300,87.76,0.0389,0.0564,0.0954,17.25
+100,9900,600,93.94,0.1056,0.1329,0.2385,19.5
+250,62250,1500,97.59,0.2067,0.3983,0.605,26.25
+500,249500,3000,98.8,0.3855,0.8966,1.2821,37.5
+1000,999000,6000,99.4,1.3817,1.9932,3.3749,60.0
+2000,3998000,12000,99.7,2.3269,4.3863,6.7132,105.0

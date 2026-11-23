@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{Comprehensive forensic dataset characteristics across 8 file formats in Dataset v2.}
+\label{tab:dataset_characteristics}
+\begin{tabular}{llrrrrc}
+\toprule
+\textbf{Format Class} & \textbf{File Extension} & \textbf{Total Files} & \textbf{Avg Size (KB)} & \textbf{Total Fragments} & \textbf{Internal Structure} & \textbf{Validation Tier} \\
+\midrule
+Image & JPEG / JPG & 10 & 245.2 & 4,790 & Huffman/DCT, EXIF & $L_0 - L_4$ \\
+Image & PNG & 10 & 188.6 & 3,684 & Chunks (IHDR, IDAT, IEND) & $L_0 - L_4$ \\
+Document & PDF & 10 & 382.4 & 7,468 & Cross-Reference Table, Objects & $L_0 - L_4$ \\
+Archive & ZIP & 8 & 312.0 & 4,875 & Central Directory, Deflate & $L_0 - L_4$ \\
+Document & DOCX & 8 & 210.5 & 3,289 & OpenXML, Relationships, ZIP & $L_0 - L_4$ \\
+Spreadsheet & XLSX & 8 & 195.4 & 3,053 & OpenXML, Worksheets, ZIP & $L_0 - L_4$ \\
+Audio & MP3 & 9 & 450.8 & 7,044 & ID3v2 Tags, MPEG Audio Frames & $L_0 - L_4$ \\
+Video & MP4 & 9 & 820.6 & 12,822 & ISO Base Media (ftyp, moov, mdat) & $L_0 - L_4$ \\
+\midrule
+\textbf{Total / Summary} & 8 Formats & \textbf{72} & \textbf{350.7} & \textbf{47,025} & Multi-Tier Heterogeneous & Full Matrix \\
+\bottomrule
+\end{tabular}
+\end{table*}

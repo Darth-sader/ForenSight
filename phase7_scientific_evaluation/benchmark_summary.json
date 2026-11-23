@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "version": "2.0.0-phase7",
+    "seed": 42,
+    "total_benchmark_runtime_seconds": 14.63,
+    "n_test_files": 13,
+    "n_test_fragments": 955
+  },
+  "baselines_evaluated": 10,
+  "component_ablations_evaluated": 13,
+  "feature_ablations_evaluated": 6,
+  "scenarios_evaluated": 11,
+  "scalability_points_evaluated": 6
+}
